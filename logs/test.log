@@ -1,0 +1,14 @@
+2022-53-15 14:53:42.799 [main] INFO  com.hdz.socialplatform.SocialplatformApplication - Starting SocialplatformApplication using Java 12.0.2 on Hdz with PID 11888 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-53-15 14:53:42.806 [main] DEBUG com.hdz.socialplatform.SocialplatformApplication - Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-53-15 14:53:42.807 [main] INFO  com.hdz.socialplatform.SocialplatformApplication - No active profile set, falling back to default profiles: default
+2022-53-15 14:53:43.938 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-53-15 14:53:43.939 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-53-15 14:53:43.939 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-53-15 14:53:44.003 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform] - Initializing Spring embedded WebApplicationContext
+2022-53-15 14:53:44.742 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-53-15 14:53:44.765 [main] INFO  com.hdz.socialplatform.SocialplatformApplication - Started SocialplatformApplication in 2.377 seconds (JVM running for 3.231)
+2022-53-15 14:53:51.190 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-53-15 14:53:51.253 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2022-53-15 14:53:51.330 [http-nio-8081-exec-1] DEBUG com.hdz.socialplatform.dao.HelloMapper.getHelloByIdUp - ==>  Preparing: select * from vip_user where id >?
+2022-53-15 14:53:51.344 [http-nio-8081-exec-1] DEBUG com.hdz.socialplatform.dao.HelloMapper.getHelloByIdUp - ==> Parameters: 1(Long)
+2022-53-15 14:53:51.361 [http-nio-8081-exec-1] DEBUG com.hdz.socialplatform.dao.HelloMapper.getHelloByIdUp - <==      Total: 7

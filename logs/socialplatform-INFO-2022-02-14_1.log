@@ -1,0 +1,8 @@
+21:27:03.210 [main] INFO  com.hdz.socialplatform.SocialplatformApplication - Starting SocialplatformApplication using Java 12.0.2 on Hdz with PID 26508 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+21:27:03.229 [main] INFO  com.hdz.socialplatform.SocialplatformApplication - No active profile set, falling back to default profiles: default
+21:27:04.326 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+21:27:04.326 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+21:27:04.330 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+21:27:04.396 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform] - Initializing Spring embedded WebApplicationContext
+21:27:05.099 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+21:27:05.121 [main] INFO  com.hdz.socialplatform.SocialplatformApplication - Started SocialplatformApplication in 2.551 seconds (JVM running for 3.362)
