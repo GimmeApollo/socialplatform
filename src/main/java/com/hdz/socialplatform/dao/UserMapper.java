@@ -9,16 +9,17 @@ import java.util.List;
 
 /**
  * @author hdz
- * @description 测试使用
- * @create 2022年02月12日 12:39
+ * @description TODO
+ * @create 2022年03月12日 15:39
  */
+
 
 @Mapper
 @Repository
-public interface HelloMapper {
+public interface UserMapper {
 
-    @Select("SELECT * FROM vip_user where id=#{id};")
-    User getHelloById(Long id);
+    User getUser(String name, String password);
 
-    List<User> getHelloByIdUp(Long id);
+    User getUserById(int id);
+
 }

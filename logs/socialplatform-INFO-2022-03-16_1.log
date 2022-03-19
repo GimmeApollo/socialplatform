@@ -1,0 +1,12 @@
+2022-36-16 23:36:21.091 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:55) - Starting SocialPlatformApplication using Java 12.0.2 on Hdz with PID 28344 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-36-16 23:36:21.107 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-36-16 23:36:22.287 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
+2022-36-16 23:36:22.289 [main] INFO  org.apache.catalina.core.StandardService(DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-36-16 23:36:22.290 [main] INFO  org.apache.catalina.core.StandardEngine(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-36-16 23:36:22.365 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-36-16 23:36:23.390 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
+2022-36-16 23:36:23.416 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:61) - Started SocialPlatformApplication in 2.933 seconds (JVM running for 3.862)
+2022-36-16 23:36:30.010 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-36-16 23:36:30.227 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [188] milliseconds.
+2022-36-16 23:36:32.648 [http-nio-8081-exec-3] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-36-16 23:36:32.868 [http-nio-8081-exec-3] INFO  com.hdz.socialplatform.controller.UserController(UserController.java:57) - User{id=1, name='xiao', avatar='xiao.png', profile='降魔大圣', fansNum=3, followsNum=0, events=null}

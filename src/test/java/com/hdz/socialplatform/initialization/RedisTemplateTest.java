@@ -1,6 +1,6 @@
 package com.hdz.socialplatform.initialization;
 
-import com.hdz.socialplatform.SocialplatformApplicationTests;
+import com.hdz.socialplatform.SocialPlatformApplicationTests;
 import com.hdz.socialplatform.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.util.Lists;
@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 
-import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -24,7 +23,7 @@ import java.util.stream.IntStream;
  */
 
 @Slf4j
-public class RedisTemplateTest extends SocialplatformApplicationTests {
+public class RedisTemplateTest extends SocialPlatformApplicationTests {
 
 
     @Autowired
@@ -49,7 +48,7 @@ public class RedisTemplateTest extends SocialplatformApplicationTests {
 
         //3、测试object
         String key = "hdz:user:1";
-        redisCacheTemplate.opsForValue().set(key, new User(1L, "user1"));
+        redisCacheTemplate.opsForValue().set(key, new User());
         // 对应 String（字符串）
         User user = (User) redisCacheTemplate.opsForValue().get(key);
         log.debug("【user】= {}", user);
@@ -65,9 +64,9 @@ public class RedisTemplateTest extends SocialplatformApplicationTests {
         String hashKey = "hdz:userMap";
         HashMap<String, User> hashMap = new HashMap<>(){
             {
-                this.put("hdz:user:1",new User(1L,"user1"));
-                this.put("hdz:user:2",new User(2L, "user2"));
-                this.put("hdz:user:3",new User(3L,"user3"));
+                this.put("hdz:user:1",new User());
+                this.put("hdz:user:2",new User());
+                this.put("hdz:user:3",new User());
             }
         };
         redisCacheTemplate.boundHashOps(hashKey).putAll(hashMap);

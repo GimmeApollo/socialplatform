@@ -1,0 +1,189 @@
+2022-06-12 19:06:15.697 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:55) - Starting SocialPlatformApplication using Java 12.0.2 on Hdz with PID 15936 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-06-12 19:06:15.714 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-06-12 19:06:16.921 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
+2022-06-12 19:06:16.922 [main] INFO  org.apache.catalina.core.StandardService(DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-06-12 19:06:16.923 [main] INFO  org.apache.catalina.core.StandardEngine(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-06-12 19:06:16.994 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-06-12 19:06:17.876 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
+2022-06-12 19:06:17.901 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:61) - Started SocialPlatformApplication in 2.864 seconds (JVM running for 3.893)
+2022-10-12 19:10:13.922 [http-nio-8081-exec-5] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-17-12 19:17:52.013 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:55) - Starting SocialPlatformApplication using Java 12.0.2 on Hdz with PID 33288 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-17-12 19:17:52.023 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-17-12 19:17:53.056 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
+2022-17-12 19:17:53.056 [main] INFO  org.apache.catalina.core.StandardService(DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-17-12 19:17:53.057 [main] INFO  org.apache.catalina.core.StandardEngine(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-17-12 19:17:53.121 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-17-12 19:17:53.801 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
+2022-17-12 19:17:53.825 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:61) - Started SocialPlatformApplication in 2.251 seconds (JVM running for 3.139)
+2022-17-12 19:17:58.597 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-24-12 19:24:19.079 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:55) - Starting SocialPlatformApplication using Java 12.0.2 on Hdz with PID 16456 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-24-12 19:24:19.089 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-24-12 19:24:20.176 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
+2022-24-12 19:24:20.177 [main] INFO  org.apache.catalina.core.StandardService(DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-24-12 19:24:20.177 [main] INFO  org.apache.catalina.core.StandardEngine(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-24-12 19:24:20.242 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-24-12 19:24:20.929 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
+2022-24-12 19:24:20.953 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:61) - Started SocialPlatformApplication in 2.416 seconds (JVM running for 3.197)
+2022-24-12 19:24:24.760 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-24-12 19:24:24.846 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-32-12 19:32:10.758 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:55) - Starting SocialPlatformApplication using Java 12.0.2 on Hdz with PID 12276 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-32-12 19:32:10.770 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-32-12 19:32:11.865 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
+2022-32-12 19:32:11.866 [main] INFO  org.apache.catalina.core.StandardService(DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-32-12 19:32:11.866 [main] INFO  org.apache.catalina.core.StandardEngine(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-32-12 19:32:11.933 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-32-12 19:32:12.636 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
+2022-32-12 19:32:12.660 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:61) - Started SocialPlatformApplication in 2.335 seconds (JVM running for 3.151)
+2022-32-12 19:32:16.824 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-32-12 19:32:17.015 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-09-12 20:09:01.742 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:55) - Starting SocialPlatformApplication using Java 12.0.2 on Hdz with PID 3036 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-09-12 20:09:01.752 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-09-12 20:09:02.761 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
+2022-09-12 20:09:02.762 [main] INFO  org.apache.catalina.core.StandardService(DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-09-12 20:09:02.763 [main] INFO  org.apache.catalina.core.StandardEngine(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-09-12 20:09:02.826 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-09-12 20:09:03.507 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
+2022-09-12 20:09:03.533 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:61) - Started SocialPlatformApplication in 2.242 seconds (JVM running for 3.234)
+2022-09-12 20:09:07.028 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-12 20:09:07.158 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-21-12 20:21:56.730 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:55) - Starting SocialPlatformApplication using Java 12.0.2 on Hdz with PID 14748 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-21-12 20:21:56.740 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-21-12 20:21:57.779 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
+2022-21-12 20:21:57.780 [main] INFO  org.apache.catalina.core.StandardService(DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-21-12 20:21:57.781 [main] INFO  org.apache.catalina.core.StandardEngine(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-21-12 20:21:57.847 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-21-12 20:21:58.602 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
+2022-21-12 20:21:58.630 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:61) - Started SocialPlatformApplication in 2.408 seconds (JVM running for 3.232)
+2022-22-12 20:22:03.842 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-22-12 20:22:03.993 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-24-12 20:24:30.305 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:55) - Starting SocialPlatformApplication using Java 12.0.2 on Hdz with PID 33896 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-24-12 20:24:30.321 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-24-12 20:24:31.528 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
+2022-24-12 20:24:31.528 [main] INFO  org.apache.catalina.core.StandardService(DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-24-12 20:24:31.529 [main] INFO  org.apache.catalina.core.StandardEngine(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-24-12 20:24:31.596 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-24-12 20:24:32.354 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
+2022-24-12 20:24:32.382 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:61) - Started SocialPlatformApplication in 2.557 seconds (JVM running for 3.428)
+2022-24-12 20:24:35.859 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-24-12 20:24:35.978 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-31-12 20:31:48.134 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:55) - Starting SocialPlatformApplication using Java 12.0.2 on Hdz with PID 30300 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-31-12 20:31:48.143 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-31-12 20:31:49.105 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
+2022-31-12 20:31:49.106 [main] INFO  org.apache.catalina.core.StandardService(DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-31-12 20:31:49.107 [main] INFO  org.apache.catalina.core.StandardEngine(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-31-12 20:31:49.172 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-31-12 20:31:49.836 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
+2022-31-12 20:31:49.861 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:61) - Started SocialPlatformApplication in 2.152 seconds (JVM running for 2.938)
+2022-31-12 20:31:53.894 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-31-12 20:31:54.037 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-41-12 20:41:12.834 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:55) - Starting SocialPlatformApplication using Java 12.0.2 on Hdz with PID 17900 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-41-12 20:41:12.842 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-41-12 20:41:13.794 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
+2022-41-12 20:41:13.795 [main] INFO  org.apache.catalina.core.StandardService(DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-41-12 20:41:13.796 [main] INFO  org.apache.catalina.core.StandardEngine(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-41-12 20:41:13.858 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-41-12 20:41:14.544 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
+2022-41-12 20:41:14.566 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:61) - Started SocialPlatformApplication in 2.194 seconds (JVM running for 2.936)
+2022-41-12 20:41:17.911 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-41-12 20:41:18.057 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-44-12 20:44:09.487 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:55) - Starting SocialPlatformApplication using Java 12.0.2 on Hdz with PID 34636 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-44-12 20:44:09.496 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-44-12 20:44:10.533 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
+2022-44-12 20:44:10.533 [main] INFO  org.apache.catalina.core.StandardService(DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-44-12 20:44:10.534 [main] INFO  org.apache.catalina.core.StandardEngine(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-44-12 20:44:10.597 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-44-12 20:44:11.263 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
+2022-44-12 20:44:11.286 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:61) - Started SocialPlatformApplication in 2.213 seconds (JVM running for 3.073)
+2022-44-12 20:44:19.192 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-44-12 20:44:19.302 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-44-12 20:44:43.558 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:55) - Starting SocialPlatformApplication using Java 12.0.2 on Hdz with PID 24092 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-44-12 20:44:43.566 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-44-12 20:44:44.499 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
+2022-44-12 20:44:44.500 [main] INFO  org.apache.catalina.core.StandardService(DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-44-12 20:44:44.500 [main] INFO  org.apache.catalina.core.StandardEngine(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-44-12 20:44:44.564 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-44-12 20:44:45.234 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
+2022-44-12 20:44:45.259 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:61) - Started SocialPlatformApplication in 2.122 seconds (JVM running for 2.935)
+2022-44-12 20:44:53.176 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-44-12 20:44:53.290 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-46-12 20:46:09.479 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:55) - Starting SocialPlatformApplication using Java 12.0.2 on Hdz with PID 32252 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-46-12 20:46:09.489 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-46-12 20:46:10.459 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
+2022-46-12 20:46:10.460 [main] INFO  org.apache.catalina.core.StandardService(DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-46-12 20:46:10.461 [main] INFO  org.apache.catalina.core.StandardEngine(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-46-12 20:46:10.540 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-46-12 20:46:11.219 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
+2022-46-12 20:46:11.242 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:61) - Started SocialPlatformApplication in 2.169 seconds (JVM running for 2.964)
+2022-46-12 20:46:24.385 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-46-12 20:46:24.501 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-46-12 20:46:24.627 [http-nio-8081-exec-1] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.hdz.socialplatform.controller.UserController.login(UserController.java:36) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.lang.Thread.run(Thread.java:835) [?:?]
+2022-47-12 20:47:19.241 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:55) - Starting SocialPlatformApplication using Java 12.0.2 on Hdz with PID 25380 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-47-12 20:47:19.252 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-47-12 20:47:20.209 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
+2022-47-12 20:47:20.210 [main] INFO  org.apache.catalina.core.StandardService(DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-47-12 20:47:20.210 [main] INFO  org.apache.catalina.core.StandardEngine(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-47-12 20:47:20.284 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-47-12 20:47:20.951 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
+2022-47-12 20:47:20.975 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:61) - Started SocialPlatformApplication in 2.252 seconds (JVM running for 3.094)
+2022-47-12 20:47:32.354 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-47-12 20:47:32.477 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-28-12 23:28:42.171 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:55) - Starting SocialPlatformApplication using Java 12.0.2 on Hdz with PID 34900 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-28-12 23:28:42.177 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-28-12 23:28:43.165 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
+2022-28-12 23:28:43.166 [main] INFO  org.apache.catalina.core.StandardService(DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-28-12 23:28:43.167 [main] INFO  org.apache.catalina.core.StandardEngine(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-28-12 23:28:43.241 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-28-12 23:28:43.944 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
+2022-28-12 23:28:43.968 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:61) - Started SocialPlatformApplication in 2.278 seconds (JVM running for 3.191)

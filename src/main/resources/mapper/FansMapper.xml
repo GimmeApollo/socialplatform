@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hdz.socialplatform.dao.FansMapper">
+
+    <select id="countFans" resultType="java.lang.Integer">
+        select count(*) from user_follow where star_id = #{id}
+    </select>
+
+    <select id="countFollowers" resultType="java.lang.Integer">
+        select count(*) from user_follow where follower_id = #{id}
+    </select>
+
+    <select id="inWhiteById" resultType="java.lang.Integer">
+        SELECT `valid`
+        FROM user_shield
+        where user_id = #{masterId} and black_id = #{guestId};
+    </select>
+
+    <insert id="insertShield">
+        INSERT INTO `user_shield`(`user_id`, `black_id`, `valid`) VALUES (#{userId},#{blackId}, 1);
+    </insert>
+
+    <update id="updateShield">
+        update user_shield
+        set `valid`=1
+        where `user_id`=#{userId} and `black_id`=#{blackId};
+    </update>
+
+    <update id="unShield">
+        update user_shield
+        set `valid`=0
+        where `user_id`=#{userId} and `black_id`=#{blackId};
+    </update>
+
+
+
+    <select id="ifFollow" resultType="java.lang.Integer">
+        select `valid`
+        from user_follow
+        where `star_id` = #{starId} and `follower_id`=#{followerId}
+    </select>
+
+    <insert id="insertFollow">
+        insert into user_follow(`star_id`, `follower_id` ,`valid`) values(#{starId}, #{followerId},1);
+    </insert>
+
+    <update id="updateFollow">
+        update user_follow
+        set `valid` = 1
+        where `star_id` = #{starId} and `follower_id`=#{followerId};
+    </update>
+
+    <update id="unFollow">
+        update user_follow
+        set `valid` = 0
+        where `star_id` = #{starId} and `follower_id`=#{followerId};
+    </update>
+
+
+</mapper>

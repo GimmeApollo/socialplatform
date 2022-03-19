@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hdz.socialplatform.dao.UserMapper">
+
+    <select id="getUser" resultType="com.hdz.socialplatform.entity.User">
+        SELECT `id`,`name`,`avatar`,`profile` FROM user where `name`=#{name} and `password`=#{password};
+    </select>
+
+    <select id="getUserById" resultType="com.hdz.socialplatform.entity.User">
+        SELECT `id`,`name`,`avatar`,`profile` FROM user where `id`=#{id};
+    </select>
+
+</mapper>
