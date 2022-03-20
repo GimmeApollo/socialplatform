@@ -2,9 +2,16 @@ package com.hdz.socialplatform.service;
 
 import com.hdz.socialplatform.dao.FansMapper;
 import com.hdz.socialplatform.dao.UserMapper;
+import com.hdz.socialplatform.entity.FansVO;
+import com.hdz.socialplatform.entity.StarVO;
 import com.hdz.socialplatform.entity.User;
+import com.hdz.socialplatform.utils.Pager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author hdz
@@ -20,6 +27,43 @@ public class FansService {
     @Autowired
     public UserMapper userMapper;
 
+    public Pager<FansVO> fansByPager(int starId, int page ,int size){
+        Map<String,Object> params=new HashMap<>();
+        params.put("offset",(page-1)*size);
+        params.put("limit",size);
+        params.put("starId",starId);
+        List<FansVO> list = fansMapper.fansByPager(params);
+        Pager<FansVO> pager = new Pager<>();
+        pager.setPage(page);
+        pager.setSize(size);
+        pager.setList(list);
+        pager.setTotal(fansMapper.countFans(starId));
+        return pager;
+    }
+
+    public Pager<StarVO> starByPager(int followerId, int page, int size){
+        Map<String,Object> params=new HashMap<>();
+        params.put("offset",(page-1)*size);
+        params.put("limit",size);
+        params.put("followerId",followerId);
+        List<StarVO> list=fansMapper.starByPager(params);
+        Pager<StarVO> pager = new Pager<>();
+        pager.setPage(page);
+        pager.setSize(size);
+        pager.setList(list);
+        pager.setTotal(fansMapper.countFollowers(followerId));
+        return pager;
+    }
+
+    //统计粉丝数量
+    public int countFans(User user) {
+        return fansMapper.countFans(user);
+    }
+
+    //统计已关注数量
+    public int countFollowers(User user) {
+        return fansMapper.countFollowers(user);
+    }
 
     //查找用户信息
     public User getUser(int id) {
@@ -33,29 +77,18 @@ public class FansService {
     }
 
     //userId去屏蔽blackId
-    public boolean shield(int userId, int blackId){
+    public boolean shield(int userId, int blackId) {
         Integer valid = fansMapper.inWhiteById(blackId, userId);
-        if(valid==null){
-            return 1==fansMapper.insertShield(userId,blackId);
-        }else {
-            return 1==fansMapper.updateShield(userId,blackId);
+        if (valid == null) {
+            return 1 == fansMapper.insertShield(userId, blackId);
+        } else {
+            return 1 == fansMapper.updateShield(userId, blackId);
         }
     }
 
     //取消屏蔽
-    public boolean unshield(int userId, int blackId){
-        return 1==fansMapper.unShield(userId,blackId);
-    }
-
-
-    //统计粉丝数量
-    public int countFans(User user) {
-        return fansMapper.countFans(user);
-    }
-
-    //统计已关注数量
-    public int countFollowers(User user) {
-        return fansMapper.countFollowers(user);
+    public boolean unshield(int userId, int blackId) {
+        return 1 == fansMapper.unShield(userId, blackId);
     }
 
     //查询关注关系
@@ -65,17 +98,17 @@ public class FansService {
     }
 
     //关注（有记录则修改valid值，没记录则插入记录）
-    public boolean follow(int starId, int followerId){
+    public boolean follow(int starId, int followerId) {
         Integer valid = fansMapper.ifFollow(starId, followerId);
-        if(valid == null){
+        if (valid == null) {
             return 1 == fansMapper.insertFollow(starId, followerId);
-        }else {
+        } else {
             return 1 == fansMapper.updateFollow(starId, followerId);
         }
     }
 
     //取消关注
-    public boolean unfollow(int starId, int followerId){
+    public boolean unfollow(int starId, int followerId) {
         return 1 == fansMapper.unFollow(starId, followerId);
     }
 

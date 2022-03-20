@@ -17,8 +17,4 @@ import java.util.List;
 @Repository
 public interface HelloMapper {
 
-    @Select("SELECT * FROM vip_user where id=#{id};")
-    User getHelloById(Long id);
-
-    List<User> getHelloByIdUp(Long id);
 }

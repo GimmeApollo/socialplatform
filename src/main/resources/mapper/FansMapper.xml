@@ -4,12 +4,36 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hdz.socialplatform.dao.FansMapper">
 
+    <select id="fansByPager" resultType="com.hdz.socialplatform.entity.FansVO">
+        SELECT `id`, `name`, `avatar`, `profile`,`valid`
+        from user
+        left join user_follow
+        on user.id = user_follow.star_id and #{starId}=`follower_id`
+        WHERE `id` IN (
+            SELECT `follower_id`
+            FROM user_follow
+            where `star_id`=#{starId} and valid = 1
+        )
+        limit #{offset},#{limit};
+    </select>
+
+    <select id="starByPager" resultType="com.hdz.socialplatform.entity.StarVO">
+        SELECT `id`, `name`, `avatar`, `profile`, uf2.valid
+        from user
+        join user_follow as uf
+        on uf.follower_id = #{followerId} and uf.valid = 1 and uf.star_id = user.id
+        left join user_follow as uf2
+        on user.id = uf2.follower_id and uf2.star_id= #{followerId}
+        ORDER BY uf.follow_id
+        LIMIT #{offset},#{limit};
+    </select>
+
     <select id="countFans" resultType="java.lang.Integer">
-        select count(*) from user_follow where star_id = #{id}
+        select count(*) from user_follow where star_id = #{id} and valid = 1;
     </select>
 
     <select id="countFollowers" resultType="java.lang.Integer">
-        select count(*) from user_follow where follower_id = #{id}
+        select count(*) from user_follow where follower_id = #{id} and valid = 1;
     </select>
 
     <select id="inWhiteById" resultType="java.lang.Integer">
@@ -33,7 +57,6 @@
         set `valid`=0
         where `user_id`=#{userId} and `black_id`=#{blackId};
     </update>
-
 
 
     <select id="ifFollow" resultType="java.lang.Integer">

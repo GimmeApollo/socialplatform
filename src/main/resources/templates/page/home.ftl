@@ -38,7 +38,7 @@
     </button>
 
     <p ${ (canSee!true) ? string('','hidden')}>关注数:<a href="https://www.runoob.com/">${user.followsNum}</a></p>
-    <p ${ (canSee!true) ? string('','hidden')}>粉丝数:<a href="https://www.runoob.com/">${user.fansNum}</a></p>
+    <p ${ (canSee!true) ? string('','hidden')}>粉丝数:<a href="${followPath+"/follows?id="+user.id+"&page=1&size=2"}">${user.fansNum}</a></p>
 
 
 </div>

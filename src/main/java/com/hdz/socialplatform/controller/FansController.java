@@ -1,16 +1,16 @@
 package com.hdz.socialplatform.controller;
 
+import com.hdz.socialplatform.entity.FansVO;
+import com.hdz.socialplatform.entity.StarVO;
 import com.hdz.socialplatform.entity.User;
 import com.hdz.socialplatform.service.FansService;
+import com.hdz.socialplatform.utils.Pager;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -31,6 +31,31 @@ public class FansController {
 
     @Autowired
     FansService fansService;
+
+    //获取粉丝列表
+    @GetMapping(value = "/follows")
+    public ModelAndView getFans(@RequestParam("id") int id, @RequestParam("page") int page,@RequestParam("size") int size){
+        ModelAndView mv = new ModelAndView();
+        Pager<FansVO> pager = fansService.fansByPager(id, page, size);
+        User user = fansService.getUser(id);
+        mv.addObject(pager);
+        mv.addObject(user);
+        mv.setViewName("page/fans");
+        return mv;
+    }
+
+    //获取关注列表
+    //获取粉丝列表
+    @GetMapping(value = "/stars")
+    public ModelAndView getStars(@RequestParam("id") int id, @RequestParam("page") int page,@RequestParam("size") int size){
+        ModelAndView mv = new ModelAndView();
+        Pager<StarVO> pager = fansService.starByPager(id, page, size);
+        User user = fansService.getUser(id);
+        mv.addObject(pager);
+        mv.addObject(user);
+        mv.setViewName("page/stars");
+        return mv;
+    }
 
     //关注
     @GetMapping(value = "/follow/{id}")

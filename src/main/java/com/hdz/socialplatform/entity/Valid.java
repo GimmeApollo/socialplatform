@@ -5,8 +5,8 @@ package com.hdz.socialplatform.entity;
  * @description 是否关注的状态
  * @create 2022年03月19日 14:48
  */
-public enum State {
+public enum Valid {
 
-    FOLLOW, UNFOLLOW;
+    UNFOLLOW,FOLLOW;
 
 }

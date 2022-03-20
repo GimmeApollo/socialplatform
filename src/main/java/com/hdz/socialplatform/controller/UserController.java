@@ -87,14 +87,14 @@ public class UserController {
         User guest = (User) request.getSession().getAttribute("user");
         User user = fansService.getUser(id);
 
-        //根据访客id判断是否在主人黑名单中
+
         int guestId = guest.getId();
-        if (guestId == id) {
+        if (guestId == id) {    //是本人，回主态
             mv.setViewName("page/home");
             mv.addObject(user);
             return mv;
         }
-
+        //根据访客id判断是否在主人黑名单中
         Boolean canSee = fansService.inWhite(guestId, id);
         if (canSee) {     //不在黑名单
             user.setFansNum(fansService.countFans(user));

@@ -13,7 +13,7 @@ public class StarVO {
     private String avatar;      //头像
     private String profile;     //简介
 
-    private State state;    //是否被明星关注
+    private Integer valid=0;    //是否被明星关注
 
     public StarVO() {
     }
@@ -50,13 +50,11 @@ public class StarVO {
         this.profile = profile;
     }
 
-    public State getState() {
-        return state;
+    public Integer getValid() {
+        return valid;
     }
 
-    public void setState(State state) {
-        this.state = state;
+    public void setValid(Integer valid) {
+        this.valid = valid;
     }
-
-
 }

@@ -1,0 +1,134 @@
+2022-45-19 00:45:13.036 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:55) - Starting SocialPlatformApplication using Java 12.0.2 on Hdz with PID 13796 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-45-19 00:45:13.054 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-45-19 00:45:14.105 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
+2022-45-19 00:45:14.106 [main] INFO  org.apache.catalina.core.StandardService(DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-45-19 00:45:14.110 [main] INFO  org.apache.catalina.core.StandardEngine(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-45-19 00:45:14.177 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-45-19 00:45:14.929 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
+2022-45-19 00:45:14.952 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:61) - Started SocialPlatformApplication in 2.394 seconds (JVM running for 3.3)
+2022-46-19 16:46:55.916 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:55) - Starting SocialPlatformApplication using Java 12.0.2 on Hdz with PID 31396 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-46-19 16:46:55.933 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-46-19 16:46:57.026 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
+2022-46-19 16:46:57.027 [main] INFO  org.apache.catalina.core.StandardService(DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-46-19 16:46:57.028 [main] INFO  org.apache.catalina.core.StandardEngine(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-46-19 16:46:57.100 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-46-19 16:46:57.863 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
+2022-46-19 16:46:57.888 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:61) - Started SocialPlatformApplication in 2.565 seconds (JVM running for 3.473)
+2022-47-19 16:47:05.740 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-47-19 16:47:05.952 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [185] milliseconds.
+2022-47-19 16:47:07.434 [http-nio-8081-exec-3] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-47-19 16:47:07.598 [http-nio-8081-exec-3] INFO  com.hdz.socialplatform.controller.UserController(UserController.java:52) - User{id=1, name='xiao', avatar='xiao.png', profile='降魔大圣', fansNum=5, followsNum=4, events=null}
+2022-47-19 16:47:12.528 [http-nio-8081-exec-8] INFO  com.hdz.socialplatform.controller.FansController(FansController.java:56) - id:1取关id:3成功
+2022-11-19 20:11:18.951 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:55) - Starting SocialPlatformApplication using Java 12.0.2 on Hdz with PID 6588 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-11-19 20:11:18.958 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-11-19 20:11:20.013 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
+2022-11-19 20:11:20.014 [main] INFO  org.apache.catalina.core.StandardService(DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-11-19 20:11:20.015 [main] INFO  org.apache.catalina.core.StandardEngine(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-11-19 20:11:20.091 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-11-19 20:11:20.948 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
+2022-11-19 20:11:20.976 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:61) - Started SocialPlatformApplication in 2.588 seconds (JVM running for 3.8)
+2022-11-19 20:11:32.825 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 1044 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-11-19 20:11:32.834 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-11-19 20:11:35.942 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:61) - Started FansServiceTest in 3.494 seconds (JVM running for 5.173)
+2022-11-19 20:11:36.558 [main] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-11-19 20:11:36.883 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:1818) - {dataSource-1} closed
+2022-14-19 20:14:57.366 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 39444 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-14-19 20:14:57.375 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-15-19 20:15:01.067 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:61) - Started FansServiceTest in 4.274 seconds (JVM running for 6.008)
+2022-15-19 20:15:01.738 [main] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-49-19 20:49:04.661 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:1818) - {dataSource-1} closed
+2022-54-19 20:54:02.558 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 30460 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-54-19 20:54:02.566 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-54-19 20:54:05.466 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:61) - Started FansServiceTest in 3.279 seconds (JVM running for 4.738)
+2022-54-19 20:54:06.083 [main] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-54-19 20:54:06.363 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:1818) - {dataSource-1} closed
+2022-56-19 20:56:27.842 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 37916 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-56-19 20:56:27.850 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-56-19 20:56:30.926 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:61) - Started FansServiceTest in 3.449 seconds (JVM running for 4.965)
+2022-56-19 20:56:31.437 [main] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-56-19 20:56:31.713 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:1818) - {dataSource-1} closed
+2022-58-19 20:58:56.593 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 31400 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-58-19 20:58:56.600 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-58-19 20:58:59.608 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:61) - Started FansServiceTest in 3.364 seconds (JVM running for 4.789)
+2022-59-19 20:59:00.136 [main] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-59-19 20:59:00.411 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:1818) - {dataSource-1} closed
+2022-03-19 21:03:17.261 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 12348 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-03-19 21:03:17.269 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-03-19 21:03:20.555 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:61) - Started FansServiceTest in 3.679 seconds (JVM running for 5.3)
+2022-03-19 21:03:21.128 [main] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-03-19 21:03:21.424 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:1818) - {dataSource-1} closed
+2022-03-19 21:03:49.638 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 30972 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-03-19 21:03:49.646 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-03-19 21:03:52.644 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:61) - Started FansServiceTest in 3.353 seconds (JVM running for 4.756)
+2022-03-19 21:03:53.241 [main] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-03-19 21:03:53.520 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:1818) - {dataSource-1} closed
+2022-04-19 21:04:02.026 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 34628 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-04-19 21:04:02.036 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-04-19 21:04:05.694 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:61) - Started FansServiceTest in 4.081 seconds (JVM running for 5.702)
+2022-04-19 21:04:06.370 [main] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-04-19 21:04:54.682 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:1818) - {dataSource-1} closed
+2022-04-19 21:04:59.184 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 10980 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-04-19 21:04:59.193 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-05-19 21:05:02.848 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:61) - Started FansServiceTest in 4.068 seconds (JVM running for 5.639)
+2022-05-19 21:05:03.544 [main] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-09-19 21:09:02.277 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:1818) - {dataSource-1} closed
+2022-44-19 21:44:57.656 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 35052 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-44-19 21:44:57.667 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-45-19 21:45:58.480 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 27776 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-45-19 21:45:58.490 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-46-19 21:46:51.413 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 28596 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-46-19 21:46:51.421 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-47-19 21:47:06.053 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 34548 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-47-19 21:47:06.061 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-47-19 21:47:47.883 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 12568 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-47-19 21:47:47.892 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-47-19 21:47:51.431 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:61) - Started FansServiceTest in 3.958 seconds (JVM running for 5.47)
+2022-47-19 21:47:52.085 [main] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-54-19 21:54:38.255 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:1818) - {dataSource-1} closed
+2022-54-19 21:54:41.600 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 40848 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-54-19 21:54:41.611 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-54-19 21:54:45.262 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:61) - Started FansServiceTest in 4.103 seconds (JVM running for 5.673)
+2022-54-19 21:54:45.871 [main] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-55-19 21:55:20.010 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:1818) - {dataSource-1} closed
+2022-55-19 21:55:32.481 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 21292 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-55-19 21:55:32.489 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-55-19 21:55:35.407 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:61) - Started FansServiceTest in 3.285 seconds (JVM running for 4.672)
+2022-55-19 21:55:35.991 [main] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-55-19 21:55:36.250 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:1818) - {dataSource-1} closed
+2022-55-19 21:55:46.582 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 40736 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-55-19 21:55:46.591 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-55-19 21:55:50.147 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:61) - Started FansServiceTest in 3.998 seconds (JVM running for 5.598)
+2022-55-19 21:55:50.779 [main] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-55-19 21:55:58.642 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:1818) - {dataSource-1} closed
+2022-56-19 21:56:02.539 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 12180 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-56-19 21:56:02.547 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-56-19 21:56:05.486 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:61) - Started FansServiceTest in 3.345 seconds (JVM running for 4.809)
+2022-56-19 21:56:06.009 [main] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-56-19 21:56:06.280 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:1818) - {dataSource-1} closed
+2022-56-19 21:56:57.488 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 29240 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-56-19 21:56:57.498 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-57-19 21:57:01.074 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:61) - Started FansServiceTest in 4.015 seconds (JVM running for 5.561)
+2022-57-19 21:57:01.732 [main] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-57-19 21:57:41.596 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:1818) - {dataSource-1} closed
+2022-35-19 23:35:05.252 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 36688 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-35-19 23:35:05.260 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-36-19 23:36:07.564 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 5280 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-36-19 23:36:07.574 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-37-19 23:37:02.874 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 26260 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-37-19 23:37:02.884 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-38-19 23:38:12.833 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 31784 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-38-19 23:38:12.841 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-38-19 23:38:19.779 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 32060 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-38-19 23:38:19.789 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-42-19 23:42:05.425 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 24024 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-42-19 23:42:05.435 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-43-19 23:43:35.004 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 29064 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-43-19 23:43:35.015 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-43-19 23:43:38.482 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:61) - Started FansServiceTest in 3.918 seconds (JVM running for 5.532)
+2022-43-19 23:43:39.098 [main] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-45-19 23:45:57.523 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:1818) - {dataSource-1} closed
+2022-46-19 23:46:01.657 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:55) - Starting FansServiceTest using Java 12.0.2 on Hdz with PID 28220 (started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-46-19 23:46:01.665 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-46-19 23:46:04.559 [main] INFO  com.hdz.socialplatform.service.FansServiceTest(StartupInfoLogger.java:61) - Started FansServiceTest in 3.264 seconds (JVM running for 4.695)
+2022-46-19 23:46:05.089 [main] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-46-19 23:46:05.356 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:1818) - {dataSource-1} closed

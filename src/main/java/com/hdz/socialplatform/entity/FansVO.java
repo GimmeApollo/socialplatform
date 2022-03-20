@@ -5,16 +5,16 @@ package com.hdz.socialplatform.entity;
  * @description 粉丝VO
  * @create 2022年03月19日 14:24
  */
-public class fansVO {
+public class FansVO {
 
     private int id;
     private String name;
     private String avatar;      //头像
     private String profile;     //简介
 
-    private State state;    //是否关注了粉丝
+    private Integer valid=0;    //是否关注了粉丝
 
-    public fansVO() {
+    public FansVO() {
     }
 
     public int getId() {
@@ -49,11 +49,11 @@ public class fansVO {
         this.profile = profile;
     }
 
-    public State getState() {
-        return state;
+    public Integer getValid() {
+        return valid;
     }
 
-    public void setState(State state) {
-        this.state = state;
+    public void setValid(Integer valid) {
+        this.valid = valid;
     }
 }
