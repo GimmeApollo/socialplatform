@@ -21,7 +21,7 @@ import java.io.Serializable;
  * @create 2022年02月12日 15:37
  */
 @Configuration
-public class LettuceRedisConfig {
+public class LettuceRedisConfigurer {
 
     @Bean
     public RedisTemplate<String, Object> redisTemplate(LettuceConnectionFactory connectionFactory) {

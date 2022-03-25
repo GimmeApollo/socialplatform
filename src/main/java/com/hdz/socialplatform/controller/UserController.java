@@ -3,9 +3,11 @@ package com.hdz.socialplatform.controller;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.hdz.socialplatform.dao.FansMapper;
 import com.hdz.socialplatform.dao.HelloMapper;
+import com.hdz.socialplatform.entity.PostVO;
 import com.hdz.socialplatform.entity.User;
 import com.hdz.socialplatform.service.FansService;
 import com.hdz.socialplatform.service.LoginService;
+import com.hdz.socialplatform.service.PostService;
 import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.catalina.Host;
@@ -19,6 +21,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * @author hdz
@@ -34,10 +37,13 @@ public class UserController {
     private static final Logger logger = LogManager.getLogger(UserController.class);
 
     @Autowired
-    LoginService loginService;
+    private LoginService loginService;
 
     @Autowired
-    FansService fansService;
+    private FansService fansService;
+
+    @Autowired
+    private PostService postService;
 
     //登录判断逻辑
     @PostMapping(value = "/login")
@@ -75,6 +81,8 @@ public class UserController {
         } else {
             mv.setViewName("page/home");
             mv.addObject(user);
+            List<PostVO> postVOs = postService.selectByMyId(user.getId());
+            mv.addObject("postVOs",postVOs);
 //            boolean canSee=false;
 //            mv.addObject("canSee",canSee);
         }
@@ -105,9 +113,12 @@ public class UserController {
 
         mv.addObject("guestFollowUser", guestFollowUser);
         mv.addObject("userFollowGuest", userFollowGuest);
-
+        //后期发现canSee这是一个比较不友好的设置
         mv.addObject("canSee", canSee);
         mv.addObject(user);
+        //TODO:显示动态
+        List<PostVO> postVOs = postService.selectByFollowerId(guestId);
+        mv.addObject(postVOs);
         mv.setViewName("page/home");
         return mv;
     }

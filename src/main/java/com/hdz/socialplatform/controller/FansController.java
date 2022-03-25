@@ -30,7 +30,7 @@ public class FansController {
     private static final Logger logger = LogManager.getLogger(FansController.class);
 
     @Autowired
-    FansService fansService;
+    private FansService fansService;
 
     //获取粉丝列表
     @GetMapping(value = "/follows")

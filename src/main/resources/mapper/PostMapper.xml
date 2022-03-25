@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hdz.socialplatform.dao.PostMapper">
+
+<!--    private int postId;         //动态id-->
+<!--    private int userId;         //作者id-->
+<!--    private String content;     //动态内容-->
+<!--    private String path;        //动态图片文件夹-->
+<!--    private int onlyISee;       //是否自己可见,默认0=false-->
+<!--    private int ifReprint;      //是否为转载，默认0=false-->
+<!--    private int reprintId;      //转载id,默认0=false-->
+<!--    private int valid;          //是否存在（可能被删除）-->
+
+    <insert id="insertPost">
+        INSERT INTO `user_post`(`user_id`, `content`, `path`,`only_i_see`,`if_reprint`,`reprint_id`,`valid`,`post_time`)
+        VALUES (#{userId}, #{content}, #{path}, #{onlyISee}, #{ifReprint}, #{reprintId},1,#{postTime});
+    </insert>
+
+    <!-- 查看单条动态详情   -->
+    <select id="selectOne" resultType="com.hdz.socialplatform.entity.PostVO">
+        select `post_id`,`user_id`, `content`, `path`,`only_i_see`,`if_reprint`,`reprint_id`,`valid`,`post_time`
+        from `user_post`
+        where `post_id`=#{postId};
+    </select>
+
+    <!-- 根据id查看别人动态-->
+    <select id="selectByUserId" resultType="com.hdz.socialplatform.entity.PostVO">
+        select `post_id`,`user_id`, `content`, `path`,`only_i_see`,`if_reprint`,`reprint_id`,`post_time`
+        from `user_post`
+        where `user_id`=#{userId} and `only_i_see`= 0 and `valid`=1;
+    </select>
+
+    <!-- 根据id查看自己的动态   -->
+    <select id="selectByMyId" resultType="com.hdz.socialplatform.entity.PostVO">
+        select `post_id`,`user_id`, `content`, `path`,`only_i_see`,`if_reprint`,`reprint_id`,`post_time`
+        from `user_post`
+        where `user_id`=#{userId} and `valid`=1;
+    </select>
+
+    <!-- 查看自己关注的人的动态 -->
+    <select id="selectByFollowerId" resultType="com.hdz.socialplatform.entity.PostVO">
+        select `post_id`,`user_id`, `content`, `path`,`only_i_see`,`if_reprint`,`reprint_id`,`post_time`
+        from `user_post`
+        where `user_id` in
+        (
+            select `star_id`
+            from `user_follow`
+            where `follower_id`=#{followerId} and `valid`=1 and `star_id` not in (
+                select `user_id`
+                from `user_shield`
+                where `black_id`=#{followerId} and `valid`=1
+            )
+        ) and `only_i_see`=0;
+    </select>
+
+
+</mapper>

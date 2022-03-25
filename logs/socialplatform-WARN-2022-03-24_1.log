@@ -1,38 +1,31 @@
-2022-49-25 00:49:25.572 [http-nio-8081-exec-4] ERROR com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:138) - 目录不存在或它不是一个目录
-2022-49-25 00:49:25.579 [http-nio-8081-exec-4] ERROR com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:138) - 目录不存在或它不是一个目录
-2022-50-25 00:50:42.147 [http-nio-8081-exec-4] ERROR com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:138) - 目录不存在或它不是一个目录
-2022-50-25 00:50:42.148 [http-nio-8081-exec-4] ERROR com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:138) - 目录不存在或它不是一个目录
-2022-56-25 00:56:16.784 [http-nio-8081-exec-4] ERROR com.hdz.socialplatform.utils.LoadUtil(null:-1) - 目录不存在或它不是一个目录
-2022-56-25 00:56:16.794 [http-nio-8081-exec-4] ERROR com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:138) - 目录不存在或它不是一个目录
-2022-34-25 10:34:01.086 [http-nio-8081-exec-4] ERROR freemarker.runtime(_JULLoggerFactory.java:60) - Error executing FreeMarker template
+2022-10-24 10:10:01.684 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [229] milliseconds.
+2022-11-24 10:11:56.418 [http-nio-8081-exec-7] ERROR com.hdz.socialplatform.controller.PostController(PostController.java:63) - java.lang.NumberFormatException: For input string: "on"
+2022-13-24 10:13:03.604 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [215] milliseconds.
+2022-16-24 10:16:23.373 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [170] milliseconds.
+2022-19-24 10:19:00.402 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [169] milliseconds.
+2022-14-24 15:14:21.173 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [174] milliseconds.
+2022-14-24 15:14:24.251 [http-nio-8081-exec-5] ERROR freemarker.runtime(_JULLoggerFactory.java:60) - Error executing FreeMarker template
 freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
-==> postVO.postTime  [in template "page/home.ftl" at line 56, column 22]
+==> postVO  [in template "page/mypost.ftl" at line 6, column 22]
 
-----
-Tip: It's the step after the last dot that caused this error, not those before it.
 ----
 Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
 ----
 
 ----
 FTL stack trace ("~" means nesting-related):
-	- Failed at: ${postVO.postTime}  [in template "page/home.ftl" at line 56, column 20]
+	- Failed at: #assign ifReprint = postVO.ifReprint!0  [in template "page/mypost.ftl" at line 6, column 1]
 ----
 	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToTextualCommon(EvalUtil.java:481) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:401) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:370) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.accept(DollarVariable.java:63) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:383) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executedNestedContentForCollOrSeqListing(IteratorBlock.java:321) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executeNestedContent(IteratorBlock.java:271) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:244) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visitIteratorBlock(Environment.java:657) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:108) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94) [freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.UnexpectedTypeException.newDescriptionBuilder(UnexpectedTypeException.java:85) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:48) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.NonHashException.<init>(NonHashException.java:49) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.Dot._eval(Dot.java:48) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.Expression.eval(Expression.java:101) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.DefaultToExpression._eval(DefaultToExpression.java:96) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.Expression.eval(Expression.java:101) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.Assignment.accept(Assignment.java:134) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.visit(Environment.java:347) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:353) [freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.visit(Environment.java:353) [freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.process(Environment.java:326) [freemarker-2.3.31.jar:2.3.31]
 	at freemarker.template.Template.process(Template.java:383) [freemarker-2.3.31.jar:2.3.31]
@@ -83,47 +76,38 @@ FTL stack trace ("~" means nesting-related):
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
 	at java.lang.Thread.run(Thread.java:835) [?:?]
-2022-34-25 10:34:01.105 [http-nio-8081-exec-4] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
-==> postVO.postTime  [in template "page/home.ftl" at line 56, column 22]
+2022-14-24 15:14:24.267 [http-nio-8081-exec-5] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> postVO  [in template "page/mypost.ftl" at line 6, column 22]
 
-----
-Tip: It's the step after the last dot that caused this error, not those before it.
 ----
 Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
 ----
 
 ----
 FTL stack trace ("~" means nesting-related):
-	- Failed at: ${postVO.postTime}  [in template "page/home.ftl" at line 56, column 20]
+	- Failed at: #assign ifReprint = postVO.ifReprint!0  [in template "page/mypost.ftl" at line 6, column 1]
 ----] with root cause
 freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
-==> postVO.postTime  [in template "page/home.ftl" at line 56, column 22]
+==> postVO  [in template "page/mypost.ftl" at line 6, column 22]
 
-----
-Tip: It's the step after the last dot that caused this error, not those before it.
 ----
 Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
 ----
 
 ----
 FTL stack trace ("~" means nesting-related):
-	- Failed at: ${postVO.postTime}  [in template "page/home.ftl" at line 56, column 20]
+	- Failed at: #assign ifReprint = postVO.ifReprint!0  [in template "page/mypost.ftl" at line 6, column 1]
 ----
 	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToTextualCommon(EvalUtil.java:481) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:401) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:370) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.accept(DollarVariable.java:63) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:383) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executedNestedContentForCollOrSeqListing(IteratorBlock.java:321) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executeNestedContent(IteratorBlock.java:271) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:244) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visitIteratorBlock(Environment.java:657) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:108) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.UnexpectedTypeException.newDescriptionBuilder(UnexpectedTypeException.java:85) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:48) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.NonHashException.<init>(NonHashException.java:49) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.Dot._eval(Dot.java:48) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.Expression.eval(Expression.java:101) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.DefaultToExpression._eval(DefaultToExpression.java:96) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.Expression.eval(Expression.java:101) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.Assignment.accept(Assignment.java:134) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.visit(Environment.java:347) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:353) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.visit(Environment.java:353) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.process(Environment.java:326) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.template.Template.process(Template.java:383) ~[freemarker-2.3.31.jar:2.3.31]
@@ -174,19 +158,18 @@ FTL stack trace ("~" means nesting-related):
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
 	at java.lang.Thread.run(Thread.java:835) [?:?]
-2022-39-25 10:39:03.782 [http-nio-8081-exec-4] ERROR freemarker.runtime(_JULLoggerFactory.java:60) - Error executing FreeMarker template
+2022-16-24 15:16:08.379 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [176] milliseconds.
+2022-16-24 15:16:12.263 [http-nio-8081-exec-5] ERROR freemarker.runtime(_JULLoggerFactory.java:60) - Error executing FreeMarker template
 freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
-==> postVO.postTime  [in template "page/home.ftl" at line 56, column 22]
+==> ifReprint  [in template "page/mypost.ftl" at line 24, column 56]
 
-----
-Tip: It's the step after the last dot that caused this error, not those before it.
 ----
 Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
 ----
 
 ----
 FTL stack trace ("~" means nesting-related):
-	- Failed at: ${postVO.postTime}  [in template "page/home.ftl" at line 56, column 20]
+	- Failed at: ${ifReprint}  [in template "page/mypost.ftl" at line 24, column 54]
 ----
 	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.EvalUtil.coerceModelToTextualCommon(EvalUtil.java:481) ~[freemarker-2.3.31.jar:2.3.31]
@@ -194,15 +177,7 @@ FTL stack trace ("~" means nesting-related):
 	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:370) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.DollarVariable.accept(DollarVariable.java:63) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:383) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executedNestedContentForCollOrSeqListing(IteratorBlock.java:321) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executeNestedContent(IteratorBlock.java:271) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:244) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visitIteratorBlock(Environment.java:657) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:108) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94) [freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.visit(Environment.java:347) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:353) [freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.visit(Environment.java:353) [freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.process(Environment.java:326) [freemarker-2.3.31.jar:2.3.31]
 	at freemarker.template.Template.process(Template.java:383) [freemarker-2.3.31.jar:2.3.31]
@@ -253,31 +228,27 @@ FTL stack trace ("~" means nesting-related):
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
 	at java.lang.Thread.run(Thread.java:835) [?:?]
-2022-39-25 10:39:03.797 [http-nio-8081-exec-4] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
-==> postVO.postTime  [in template "page/home.ftl" at line 56, column 22]
+2022-16-24 15:16:12.276 [http-nio-8081-exec-5] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> ifReprint  [in template "page/mypost.ftl" at line 24, column 56]
 
-----
-Tip: It's the step after the last dot that caused this error, not those before it.
 ----
 Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
 ----
 
 ----
 FTL stack trace ("~" means nesting-related):
-	- Failed at: ${postVO.postTime}  [in template "page/home.ftl" at line 56, column 20]
+	- Failed at: ${ifReprint}  [in template "page/mypost.ftl" at line 24, column 54]
 ----] with root cause
 freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
-==> postVO.postTime  [in template "page/home.ftl" at line 56, column 22]
+==> ifReprint  [in template "page/mypost.ftl" at line 24, column 56]
 
-----
-Tip: It's the step after the last dot that caused this error, not those before it.
 ----
 Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
 ----
 
 ----
 FTL stack trace ("~" means nesting-related):
-	- Failed at: ${postVO.postTime}  [in template "page/home.ftl" at line 56, column 20]
+	- Failed at: ${ifReprint}  [in template "page/mypost.ftl" at line 24, column 54]
 ----
 	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.EvalUtil.coerceModelToTextualCommon(EvalUtil.java:481) ~[freemarker-2.3.31.jar:2.3.31]
@@ -285,15 +256,7 @@ FTL stack trace ("~" means nesting-related):
 	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:370) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.DollarVariable.accept(DollarVariable.java:63) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:383) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executedNestedContentForCollOrSeqListing(IteratorBlock.java:321) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executeNestedContent(IteratorBlock.java:271) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:244) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visitIteratorBlock(Environment.java:657) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:108) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.visit(Environment.java:347) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:353) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.visit(Environment.java:353) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.process(Environment.java:326) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.template.Template.process(Template.java:383) ~[freemarker-2.3.31.jar:2.3.31]
@@ -344,35 +307,538 @@ FTL stack trace ("~" means nesting-related):
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
 	at java.lang.Thread.run(Thread.java:835) [?:?]
-2022-39-25 10:39:44.783 [http-nio-8081-exec-7] ERROR freemarker.runtime(_JULLoggerFactory.java:60) - Error executing FreeMarker template
+2022-19-24 15:19:22.998 [http-nio-8081-exec-2] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [168] milliseconds.
+2022-19-24 15:19:36.361 [http-nio-8081-exec-7] WARN  com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:67) - 没处理content = 写点想说的......dwdw
+2022-19-24 15:19:36.364 [http-nio-8081-exec-7] WARN  com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:67) - 没处理reprintId = 0
+2022-20-24 15:20:13.740 [http-nio-8081-exec-1] WARN  com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:67) - 没处理content = 写点想说的......
+2022-20-24 15:20:13.741 [http-nio-8081-exec-1] WARN  com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:67) - 没处理reprintId = 0
+2022-23-24 15:23:39.415 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [173] milliseconds.
+2022-23-24 15:23:45.650 [http-nio-8081-exec-6] WARN  com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:70) - 没处理reprintId = 0
+2022-10-24 16:10:42.895 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [254] milliseconds.
+2022-30-24 22:30:19.065 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [177] milliseconds.
+2022-30-24 22:30:20.586 [http-nio-8081-exec-4] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.hdz.socialplatform.controller.UserController.home(UserController.java:83) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.lang.Thread.run(Thread.java:835) [?:?]
+2022-31-24 22:31:18.752 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [270] milliseconds.
+2022-31-24 22:31:20.557 [http-nio-8081-exec-4] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.hdz.socialplatform.controller.UserController.home(UserController.java:83) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.lang.Thread.run(Thread.java:835) [?:?]
+2022-31-24 22:31:28.219 [http-nio-8081-exec-7] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.hdz.socialplatform.controller.UserController.home(UserController.java:83) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.lang.Thread.run(Thread.java:835) [?:?]
+2022-32-24 22:32:32.524 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [170] milliseconds.
+2022-32-24 22:32:44.997 [http-nio-8081-exec-7] WARN  com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:56) - 创建文件夹E:\Project\IdeaProjects\socialplatform\src\main\resources\static\pictures\1\2022-03-24 22:32:44 994\失败
+2022-33-24 22:33:58.709 [http-nio-8081-exec-2] WARN  com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:56) - 创建文件夹E:\Project\IdeaProjects\socialplatform\src\main\resources\static\pictures\1\2022-03-24 22:33:58 709\失败
+2022-36-24 22:36:01.836 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [168] milliseconds.
+2022-36-24 22:36:07.505 [http-nio-8081-exec-6] WARN  com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:56) - 创建文件夹E:\Project\IdeaProjects\socialplatform\src\main\resources\static\pictures\1\2022-03-24 22:36:07 503\失败
+2022-40-24 22:40:49.896 [http-nio-8081-exec-1] WARN  com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:56) - 创建文件夹E:\Project\IdeaProjects\socialplatform\src\main\resources\static\pictures\1\2022-03-24 22:40:49 894\失败
+2022-41-24 22:41:36.810 [http-nio-8081-exec-4] WARN  com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:56) - 创建文件夹E:\Project\IdeaProjects\socialplatform\src\main\resources\static\pictures\1\2022-03-24 22:41:36 808\失败
+2022-42-24 22:42:30.829 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [273] milliseconds.
+2022-42-24 22:42:36.922 [http-nio-8081-exec-6] WARN  com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:56) - 创建文件夹E:\Project\IdeaProjects\socialplatform\src\main\resources\static\pictures\1\2022-03-24 22:42:36 920\失败
+2022-43-24 22:43:47.017 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [172] milliseconds.
+2022-43-24 22:43:52.692 [http-nio-8081-exec-6] WARN  com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:56) - 创建文件夹E:\Project\IdeaProjects\socialplatform\src\main\resources\static\pictures\1\2022-03-24 22:43:52 689\失败
+2022-44-24 22:44:29.272 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [212] milliseconds.
+2022-44-24 22:44:33.427 [http-nio-8081-exec-6] WARN  com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:56) - 创建文件夹E:\Project\IdeaProjects\socialplatform\src\main\resources\static\pictures\1\2022-03-24 22:44:33 424\失败
+2022-45-24 22:45:32.311 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [170] milliseconds.
+2022-45-24 22:45:38.721 [http-nio-8081-exec-6] WARN  com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:56) - 创建文件夹E:\Project\IdeaProjects\socialplatform\src\main\resources\static\pictures\1\2022-03-24 22:45:38 718\失败
+2022-46-24 22:46:19.293 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [169] milliseconds.
+2022-46-24 22:46:25.151 [http-nio-8081-exec-6] WARN  com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:56) - 创建文件夹E:\Project\IdeaProjects\socialplatform\src\main\resources\static\pictures\1\2022-03-24 22:46:25 147\失败
+2022-47-24 22:47:47.673 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [171] milliseconds.
+2022-56-24 22:56:43.898 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [202] milliseconds.
+2022-59-24 22:59:11.599 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [211] milliseconds.
+2022-00-24 23:00:22.548 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [177] milliseconds.
+2022-00-24 23:00:26.889 [http-nio-8081-exec-6] WARN  com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:56) - 创建文件夹E:\Project\IdeaProjects\socialplatform\src\main\resources\static\pictures\1\2022-03-24 23:00:26 886\失败
+2022-01-24 23:01:36.650 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [173] milliseconds.
+2022-19-24 23:19:26.380 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [189] milliseconds.
+2022-19-24 23:19:28.775 [http-nio-8081-exec-4] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.hdz.socialplatform.controller.UserController.home(UserController.java:83) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.lang.Thread.run(Thread.java:835) [?:?]
+2022-20-24 23:20:15.443 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [167] milliseconds.
+2022-20-24 23:20:16.941 [http-nio-8081-exec-4] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.hdz.socialplatform.controller.UserController.home(UserController.java:83) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.lang.Thread.run(Thread.java:835) [?:?]
+2022-21-24 23:21:53.450 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [170] milliseconds.
+2022-21-24 23:21:55.023 [http-nio-8081-exec-4] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.hdz.socialplatform.controller.UserController.home(UserController.java:83) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.lang.Thread.run(Thread.java:835) [?:?]
+2022-25-24 23:25:28.449 [http-nio-8081-exec-6] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.hdz.socialplatform.controller.UserController.home(UserController.java:83) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.lang.Thread.run(Thread.java:835) [?:?]
+2022-26-24 23:26:04.067 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [199] milliseconds.
+2022-26-24 23:26:37.099 [http-nio-8081-exec-4] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.hdz.socialplatform.controller.UserController.home(UserController.java:83) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.lang.Thread.run(Thread.java:835) [?:?]
+2022-26-24 23:26:54.119 [http-nio-8081-exec-5] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.hdz.socialplatform.controller.UserController.home(UserController.java:83) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.lang.Thread.run(Thread.java:835) [?:?]
+2022-27-24 23:27:13.319 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [167] milliseconds.
+2022-27-24 23:27:14.780 [http-nio-8081-exec-4] ERROR freemarker.runtime(_JULLoggerFactory.java:60) - Error executing FreeMarker template
 freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
-==> postVO.postTime  [in template "page/home.ftl" at line 56, column 22]
+==> postVOs  [in template "page/home.ftl" at line 50, column 12]
 
-----
-Tip: It's the step after the last dot that caused this error, not those before it.
 ----
 Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
 ----
 
 ----
 FTL stack trace ("~" means nesting-related):
-	- Failed at: ${postVO.postTime}  [in template "page/home.ftl" at line 56, column 20]
+	- Failed at: #list postVOs as postVO  [in template "page/home.ftl" at line 50, column 5]
 ----
 	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToTextualCommon(EvalUtil.java:481) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:401) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:370) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.accept(DollarVariable.java:63) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:383) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executedNestedContentForCollOrSeqListing(IteratorBlock.java:321) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executeNestedContent(IteratorBlock.java:271) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:244) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visitIteratorBlock(Environment.java:657) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:108) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94) [freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.Expression.assertNonNull(Expression.java:249) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:104) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.visit(Environment.java:347) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:353) [freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.visit(Environment.java:353) [freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.process(Environment.java:326) [freemarker-2.3.31.jar:2.3.31]
 	at freemarker.template.Template.process(Template.java:383) [freemarker-2.3.31.jar:2.3.31]
@@ -423,47 +889,33 @@ FTL stack trace ("~" means nesting-related):
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
 	at java.lang.Thread.run(Thread.java:835) [?:?]
-2022-39-25 10:39:44.787 [http-nio-8081-exec-7] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
-==> postVO.postTime  [in template "page/home.ftl" at line 56, column 22]
+2022-27-24 23:27:14.795 [http-nio-8081-exec-4] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> postVOs  [in template "page/home.ftl" at line 50, column 12]
 
-----
-Tip: It's the step after the last dot that caused this error, not those before it.
 ----
 Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
 ----
 
 ----
 FTL stack trace ("~" means nesting-related):
-	- Failed at: ${postVO.postTime}  [in template "page/home.ftl" at line 56, column 20]
+	- Failed at: #list postVOs as postVO  [in template "page/home.ftl" at line 50, column 5]
 ----] with root cause
 freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
-==> postVO.postTime  [in template "page/home.ftl" at line 56, column 22]
+==> postVOs  [in template "page/home.ftl" at line 50, column 12]
 
-----
-Tip: It's the step after the last dot that caused this error, not those before it.
 ----
 Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
 ----
 
 ----
 FTL stack trace ("~" means nesting-related):
-	- Failed at: ${postVO.postTime}  [in template "page/home.ftl" at line 56, column 20]
+	- Failed at: #list postVOs as postVO  [in template "page/home.ftl" at line 50, column 5]
 ----
 	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToTextualCommon(EvalUtil.java:481) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:401) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:370) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.accept(DollarVariable.java:63) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:383) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executedNestedContentForCollOrSeqListing(IteratorBlock.java:321) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executeNestedContent(IteratorBlock.java:271) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:244) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visitIteratorBlock(Environment.java:657) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:108) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.Expression.assertNonNull(Expression.java:249) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:104) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.visit(Environment.java:347) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:353) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.visit(Environment.java:353) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.process(Environment.java:326) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.template.Template.process(Template.java:383) ~[freemarker-2.3.31.jar:2.3.31]
@@ -514,35 +966,24 @@ FTL stack trace ("~" means nesting-related):
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
 	at java.lang.Thread.run(Thread.java:835) [?:?]
-2022-43-25 10:43:36.292 [http-nio-8081-exec-9] ERROR freemarker.runtime(_JULLoggerFactory.java:60) - Error executing FreeMarker template
+2022-29-24 23:29:41.721 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [168] milliseconds.
+2022-30-24 23:30:28.959 [http-nio-8081-exec-4] ERROR freemarker.runtime(_JULLoggerFactory.java:60) - Error executing FreeMarker template
 freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
-==> postVO.postTime  [in template "page/home.ftl" at line 56, column 22]
+==> postVOs  [in template "page/home.ftl" at line 50, column 12]
 
-----
-Tip: It's the step after the last dot that caused this error, not those before it.
 ----
 Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
 ----
 
 ----
 FTL stack trace ("~" means nesting-related):
-	- Failed at: ${postVO.postTime}  [in template "page/home.ftl" at line 56, column 20]
+	- Failed at: #list postVOs as postVO  [in template "page/home.ftl" at line 50, column 5]
 ----
 	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToTextualCommon(EvalUtil.java:481) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:401) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:370) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.accept(DollarVariable.java:63) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:383) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executedNestedContentForCollOrSeqListing(IteratorBlock.java:321) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executeNestedContent(IteratorBlock.java:271) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:244) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visitIteratorBlock(Environment.java:657) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:108) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94) [freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.Expression.assertNonNull(Expression.java:249) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:104) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.visit(Environment.java:347) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:353) [freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.visit(Environment.java:353) [freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.process(Environment.java:326) [freemarker-2.3.31.jar:2.3.31]
 	at freemarker.template.Template.process(Template.java:383) [freemarker-2.3.31.jar:2.3.31]
@@ -593,47 +1034,33 @@ FTL stack trace ("~" means nesting-related):
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
 	at java.lang.Thread.run(Thread.java:835) [?:?]
-2022-43-25 10:43:36.299 [http-nio-8081-exec-9] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
-==> postVO.postTime  [in template "page/home.ftl" at line 56, column 22]
+2022-30-24 23:30:28.973 [http-nio-8081-exec-4] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> postVOs  [in template "page/home.ftl" at line 50, column 12]
 
-----
-Tip: It's the step after the last dot that caused this error, not those before it.
 ----
 Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
 ----
 
 ----
 FTL stack trace ("~" means nesting-related):
-	- Failed at: ${postVO.postTime}  [in template "page/home.ftl" at line 56, column 20]
+	- Failed at: #list postVOs as postVO  [in template "page/home.ftl" at line 50, column 5]
 ----] with root cause
 freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
-==> postVO.postTime  [in template "page/home.ftl" at line 56, column 22]
+==> postVOs  [in template "page/home.ftl" at line 50, column 12]
 
-----
-Tip: It's the step after the last dot that caused this error, not those before it.
 ----
 Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
 ----
 
 ----
 FTL stack trace ("~" means nesting-related):
-	- Failed at: ${postVO.postTime}  [in template "page/home.ftl" at line 56, column 20]
+	- Failed at: #list postVOs as postVO  [in template "page/home.ftl" at line 50, column 5]
 ----
 	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToTextualCommon(EvalUtil.java:481) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:401) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:370) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.accept(DollarVariable.java:63) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:383) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executedNestedContentForCollOrSeqListing(IteratorBlock.java:321) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executeNestedContent(IteratorBlock.java:271) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:244) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visitIteratorBlock(Environment.java:657) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:108) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.Expression.assertNonNull(Expression.java:249) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:104) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.visit(Environment.java:347) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:353) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.visit(Environment.java:353) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.process(Environment.java:326) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.template.Template.process(Template.java:383) ~[freemarker-2.3.31.jar:2.3.31]
@@ -684,35 +1111,28 @@ FTL stack trace ("~" means nesting-related):
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
 	at java.lang.Thread.run(Thread.java:835) [?:?]
-2022-43-25 10:43:50.380 [http-nio-8081-exec-4] ERROR freemarker.runtime(_JULLoggerFactory.java:60) - Error executing FreeMarker template
+2022-33-24 23:33:22.100 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [216] milliseconds.
+2022-33-24 23:33:27.422 [http-nio-8081-exec-4] ERROR freemarker.runtime(_JULLoggerFactory.java:60) - Error executing FreeMarker template
 freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
-==> postVO.postTime  [in template "page/home.ftl" at line 56, column 22]
+==> pager  [in template "page/home.ftl" at line 79, column 12]
 
-----
-Tip: It's the step after the last dot that caused this error, not those before it.
 ----
 Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
 ----
 
 ----
 FTL stack trace ("~" means nesting-related):
-	- Failed at: ${postVO.postTime}  [in template "page/home.ftl" at line 56, column 20]
+	- Failed at: #list pager.list as fans  [in template "page/home.ftl" at line 79, column 5]
 ----
 	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToTextualCommon(EvalUtil.java:481) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:401) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:370) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.accept(DollarVariable.java:63) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:383) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executedNestedContentForCollOrSeqListing(IteratorBlock.java:321) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executeNestedContent(IteratorBlock.java:271) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:244) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visitIteratorBlock(Environment.java:657) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:108) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94) [freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.UnexpectedTypeException.newDescriptionBuilder(UnexpectedTypeException.java:85) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:48) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.NonHashException.<init>(NonHashException.java:49) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.Dot._eval(Dot.java:48) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.Expression.eval(Expression.java:101) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:99) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.visit(Environment.java:347) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:353) [freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.visit(Environment.java:353) [freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.process(Environment.java:326) [freemarker-2.3.31.jar:2.3.31]
 	at freemarker.template.Template.process(Template.java:383) [freemarker-2.3.31.jar:2.3.31]
@@ -763,47 +1183,37 @@ FTL stack trace ("~" means nesting-related):
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
 	at java.lang.Thread.run(Thread.java:835) [?:?]
-2022-43-25 10:43:50.396 [http-nio-8081-exec-4] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
-==> postVO.postTime  [in template "page/home.ftl" at line 56, column 22]
+2022-33-24 23:33:27.453 [http-nio-8081-exec-4] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> pager  [in template "page/home.ftl" at line 79, column 12]
 
-----
-Tip: It's the step after the last dot that caused this error, not those before it.
 ----
 Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
 ----
 
 ----
 FTL stack trace ("~" means nesting-related):
-	- Failed at: ${postVO.postTime}  [in template "page/home.ftl" at line 56, column 20]
+	- Failed at: #list pager.list as fans  [in template "page/home.ftl" at line 79, column 5]
 ----] with root cause
 freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
-==> postVO.postTime  [in template "page/home.ftl" at line 56, column 22]
+==> pager  [in template "page/home.ftl" at line 79, column 12]
 
-----
-Tip: It's the step after the last dot that caused this error, not those before it.
 ----
 Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
 ----
 
 ----
 FTL stack trace ("~" means nesting-related):
-	- Failed at: ${postVO.postTime}  [in template "page/home.ftl" at line 56, column 20]
+	- Failed at: #list pager.list as fans  [in template "page/home.ftl" at line 79, column 5]
 ----
 	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToTextualCommon(EvalUtil.java:481) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:401) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:370) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.accept(DollarVariable.java:63) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:383) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executedNestedContentForCollOrSeqListing(IteratorBlock.java:321) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executeNestedContent(IteratorBlock.java:271) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:244) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visitIteratorBlock(Environment.java:657) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:108) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.UnexpectedTypeException.newDescriptionBuilder(UnexpectedTypeException.java:85) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:48) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.NonHashException.<init>(NonHashException.java:49) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.Dot._eval(Dot.java:48) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.Expression.eval(Expression.java:101) ~[freemarker-2.3.31.jar:2.3.31]
+	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:99) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.visit(Environment.java:347) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:353) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.visit(Environment.java:353) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.core.Environment.process(Environment.java:326) ~[freemarker-2.3.31.jar:2.3.31]
 	at freemarker.template.Template.process(Template.java:383) ~[freemarker-2.3.31.jar:2.3.31]
@@ -854,341 +1264,17 @@ FTL stack trace ("~" means nesting-related):
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
 	at java.lang.Thread.run(Thread.java:835) [?:?]
-2022-43-25 10:43:57.004 [http-nio-8081-exec-7] ERROR freemarker.runtime(_JULLoggerFactory.java:60) - Error executing FreeMarker template
-freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
-==> postVO.postTime  [in template "page/home.ftl" at line 56, column 22]
-
-----
-Tip: It's the step after the last dot that caused this error, not those before it.
-----
-Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
-----
-
-----
-FTL stack trace ("~" means nesting-related):
-	- Failed at: ${postVO.postTime}  [in template "page/home.ftl" at line 56, column 20]
-----
-	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToTextualCommon(EvalUtil.java:481) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:401) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:370) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.accept(DollarVariable.java:63) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:383) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executedNestedContentForCollOrSeqListing(IteratorBlock.java:321) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executeNestedContent(IteratorBlock.java:271) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:244) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visitIteratorBlock(Environment.java:657) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:108) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:347) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:353) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:353) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.process(Environment.java:326) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.template.Template.process(Template.java:383) [freemarker-2.3.31.jar:2.3.31]
-	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:391) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:304) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:255) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:179) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:316) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1401) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1145) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.15.jar:5.3.15]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) [tomcat-embed-core-9.0.56.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.15.jar:5.3.15]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) [tomcat-embed-core-9.0.56.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.15.jar:5.3.15]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.15.jar:5.3.15]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.15.jar:5.3.15]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at java.lang.Thread.run(Thread.java:835) [?:?]
-2022-43-25 10:43:57.008 [http-nio-8081-exec-7] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
-==> postVO.postTime  [in template "page/home.ftl" at line 56, column 22]
-
-----
-Tip: It's the step after the last dot that caused this error, not those before it.
-----
-Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
-----
-
-----
-FTL stack trace ("~" means nesting-related):
-	- Failed at: ${postVO.postTime}  [in template "page/home.ftl" at line 56, column 20]
-----] with root cause
-freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
-==> postVO.postTime  [in template "page/home.ftl" at line 56, column 22]
-
-----
-Tip: It's the step after the last dot that caused this error, not those before it.
-----
-Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
-----
-
-----
-FTL stack trace ("~" means nesting-related):
-	- Failed at: ${postVO.postTime}  [in template "page/home.ftl" at line 56, column 20]
-----
-	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToTextualCommon(EvalUtil.java:481) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:401) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:370) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.accept(DollarVariable.java:63) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:383) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executedNestedContentForCollOrSeqListing(IteratorBlock.java:321) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executeNestedContent(IteratorBlock.java:271) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:244) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visitIteratorBlock(Environment.java:657) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:108) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:347) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:353) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:353) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.process(Environment.java:326) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.template.Template.process(Template.java:383) ~[freemarker-2.3.31.jar:2.3.31]
-	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:391) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:304) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:255) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:179) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:316) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1401) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1145) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at java.lang.Thread.run(Thread.java:835) [?:?]
-2022-11-25 11:11:24.021 [http-nio-8081-exec-4] ERROR freemarker.runtime(_JULLoggerFactory.java:60) - Error executing FreeMarker template
-freemarker.core._TemplateModelException: Can't convert the date-like value to string because it isn't known if it's a date (no time part), time or date-time value.
-The blamed expression:
-==> postVO.postTime  [in template "page/home.ftl" at line 56, column 22]
-
-----
-Tip: Use ?date, ?time, or ?datetime to tell FreeMarker the exact type.
-----
-Tip: If you need a particular format only once, use ?string(pattern), like ?string('dd.MM.yyyy HH:mm:ss'), to specify which fields to display. 
-----
-
-----
-FTL stack trace ("~" means nesting-related):
-	- Failed at: ${postVO.postTime}  [in template "page/home.ftl" at line 56, column 20]
-----
-	at freemarker.core._MessageUtil.newCantFormatUnknownTypeDateException(_MessageUtil.java:311) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.getTemplateDateFormat(Environment.java:1980) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.getTemplateDateFormat(Environment.java:1965) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:392) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:370) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.accept(DollarVariable.java:63) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:383) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executedNestedContentForCollOrSeqListing(IteratorBlock.java:321) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executeNestedContent(IteratorBlock.java:271) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:244) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visitIteratorBlock(Environment.java:657) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:108) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:347) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:353) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:353) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.process(Environment.java:326) [freemarker-2.3.31.jar:2.3.31]
-	at freemarker.template.Template.process(Template.java:383) [freemarker-2.3.31.jar:2.3.31]
-	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:391) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:304) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:255) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:179) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:316) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1401) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1145) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.15.jar:5.3.15]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) [tomcat-embed-core-9.0.56.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.15.jar:5.3.15]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) [tomcat-embed-core-9.0.56.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.15.jar:5.3.15]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.15.jar:5.3.15]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.15.jar:5.3.15]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at java.lang.Thread.run(Thread.java:835) [?:?]
-Caused by: freemarker.core.UnknownDateTypeFormattingUnsupportedException: Can't convert the date-like value to string because it isn't known if it's a date (no time part), time or date-time value.
-	at freemarker.core.Environment.getTemplateDateFormat(Environment.java:2042) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.getTemplateDateFormat(Environment.java:1812) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.getTemplateDateFormat(Environment.java:1978) ~[freemarker-2.3.31.jar:2.3.31]
-	... 64 more
-2022-11-25 11:11:24.036 [http-nio-8081-exec-4] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform].[dispatcherServlet](DirectJDKLog.java:175) - Servlet.service() for servlet [dispatcherServlet] in context with path [/platform] threw exception [Request processing failed; nested exception is freemarker.core._TemplateModelException: Can't convert the date-like value to string because it isn't known if it's a date (no time part), time or date-time value.
-The blamed expression:
-==> postVO.postTime  [in template "page/home.ftl" at line 56, column 22]
-
-----
-Tip: Use ?date, ?time, or ?datetime to tell FreeMarker the exact type.
-----
-Tip: If you need a particular format only once, use ?string(pattern), like ?string('dd.MM.yyyy HH:mm:ss'), to specify which fields to display. 
-----
-
-----
-FTL stack trace ("~" means nesting-related):
-	- Failed at: ${postVO.postTime}  [in template "page/home.ftl" at line 56, column 20]
-----] with root cause
-freemarker.core.UnknownDateTypeFormattingUnsupportedException: Can't convert the date-like value to string because it isn't known if it's a date (no time part), time or date-time value.
-	at freemarker.core.Environment.getTemplateDateFormat(Environment.java:2042) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.getTemplateDateFormat(Environment.java:1812) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.getTemplateDateFormat(Environment.java:1978) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.getTemplateDateFormat(Environment.java:1965) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:392) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:370) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.DollarVariable.accept(DollarVariable.java:63) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:383) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executedNestedContentForCollOrSeqListing(IteratorBlock.java:321) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.executeNestedContent(IteratorBlock.java:271) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:244) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visitIteratorBlock(Environment.java:657) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:108) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:347) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:353) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.visit(Environment.java:353) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.core.Environment.process(Environment.java:326) ~[freemarker-2.3.31.jar:2.3.31]
-	at freemarker.template.Template.process(Template.java:383) ~[freemarker-2.3.31.jar:2.3.31]
-	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:391) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:304) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:255) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:179) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:316) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1401) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1145) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.15.jar:5.3.15]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at java.lang.Thread.run(Thread.java:835) [?:?]
+2022-34-24 23:34:51.139 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [267] milliseconds.
+2022-35-24 23:35:38.992 [http-nio-8081-exec-6] ERROR com.hdz.socialplatform.controller.PostController(PostController.java:69) - java.io.FileNotFoundException: 1\22-03-24 233530 068\qiqi.png (系统找不到指定的路径。)
+2022-40-24 23:40:14.454 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [201] milliseconds.
+2022-40-24 23:40:28.280 [http-nio-8081-exec-7] ERROR com.hdz.socialplatform.utils.LoadUtil(LoadUtil.java:137) - 目录不存在或它不是一个目录
+2022-42-24 23:42:58.876 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [173] milliseconds.
+2022-45-24 23:45:05.876 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [171] milliseconds.
+2022-48-24 23:48:05.854 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [208] milliseconds.
+2022-49-24 23:49:02.481 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [194] milliseconds.
+2022-50-24 23:50:02.355 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [168] milliseconds.
+2022-51-24 23:51:09.863 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [216] milliseconds.
+2022-53-24 23:53:20.773 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [175] milliseconds.
+2022-54-24 23:54:52.695 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [238] milliseconds.
+2022-58-24 23:58:11.905 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [187] milliseconds.
+2022-59-24 23:59:42.864 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [262] milliseconds.

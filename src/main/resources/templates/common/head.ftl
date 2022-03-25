@@ -6,6 +6,9 @@
 	<#assign basepath = "http://localhost:8081/platform/static">
 	<#assign userpath = "http://localhost:8081/platform/user">
 	<#assign followPath = "http://localhost:8081/platform/fans">
+	<#assign postPath = "http://localhost:8081/platform/post">
+	<#assign picpath = "http://localhost:8081/platform/pictures">
+
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<title>hdz测试项目</title>
 </head>

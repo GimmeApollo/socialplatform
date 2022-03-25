@@ -56,4 +56,6 @@ public class FansVO {
     public void setValid(Integer valid) {
         this.valid = valid;
     }
+
+
 }

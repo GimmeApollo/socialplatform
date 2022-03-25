@@ -1,11 +1,15 @@
 package com.hdz.socialplatform.service;
 
+import com.hdz.socialplatform.controller.FansController;
 import com.hdz.socialplatform.dao.FansMapper;
 import com.hdz.socialplatform.dao.UserMapper;
 import com.hdz.socialplatform.entity.FansVO;
 import com.hdz.socialplatform.entity.StarVO;
 import com.hdz.socialplatform.entity.User;
 import com.hdz.socialplatform.utils.Pager;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,14 +22,17 @@ import java.util.Map;
  * @description TODO 关注关系服务
  * @create 2022年03月13日 20:23
  */
+@Slf4j
 @Service
 public class FansService {
 
-    @Autowired
-    public FansMapper fansMapper;
+    private static final Logger logger = LogManager.getLogger(FansService.class);
 
     @Autowired
-    public UserMapper userMapper;
+    private FansMapper fansMapper;
+
+    @Autowired
+    private UserMapper userMapper;
 
     public Pager<FansVO> fansByPager(int starId, int page ,int size){
         Map<String,Object> params=new HashMap<>();
