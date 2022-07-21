@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="en">
 <#include "../common/head.ftl">
-<title>关注人的动态</title>
+<title>动态详情</title>
 
 
 
 <body>
 <div id="app" style="margin: 20px 20%">
-    <h1>关注人的动态</h1>
+    <h1>动态详情</h1>
 
-    <#--  待写  -->
+    <#--  todo:待写  -->
 
 
 

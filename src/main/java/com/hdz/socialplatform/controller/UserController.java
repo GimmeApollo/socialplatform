@@ -1,16 +1,11 @@
 package com.hdz.socialplatform.controller;
 
-import com.fasterxml.jackson.databind.util.JSONPObject;
-import com.hdz.socialplatform.dao.FansMapper;
-import com.hdz.socialplatform.dao.HelloMapper;
 import com.hdz.socialplatform.entity.PostVO;
 import com.hdz.socialplatform.entity.User;
 import com.hdz.socialplatform.service.FansService;
-import com.hdz.socialplatform.service.LoginService;
+import com.hdz.socialplatform.service.UserService;
 import com.hdz.socialplatform.service.PostService;
-import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.catalina.Host;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +14,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.util.List;
 
 /**
@@ -37,7 +30,7 @@ public class UserController {
     private static final Logger logger = LogManager.getLogger(UserController.class);
 
     @Autowired
-    private LoginService loginService;
+    private UserService userService;
 
     @Autowired
     private FansService fansService;
@@ -48,7 +41,7 @@ public class UserController {
     //登录判断逻辑
     @PostMapping(value = "/login")
     public ModelAndView login(User u, HttpServletRequest request) {
-        User user = loginService.login(u.getName(), u.getPassword());
+        User user = userService.login(u.getName(), u.getPassword());
         ModelAndView mv;
 //        System.out.println(request.getHeader("host"));
         //登录成功转主态页面
@@ -117,8 +110,12 @@ public class UserController {
         mv.addObject("canSee", canSee);
         mv.addObject(user);
         //TODO:显示动态
-        List<PostVO> postVOs = postService.selectByFollowerId(guestId);
-        mv.addObject(postVOs);
+        if(canSee){
+            //显示主人的动态
+            List<PostVO> postVOs = postService.selectByUserId(id);
+            mv.addObject(postVOs);
+        }
+
         mv.setViewName("page/home");
         return mv;
     }

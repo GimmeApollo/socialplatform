@@ -32,6 +32,12 @@ public interface PostMapper {
     //根据关注列表来查看动态
     public List<PostVO> selectByFollowerId(int followerId);
 
+    //设置仅自己可见
+    public int setOnlyISee(int postId);
 
+    //取消仅自己可见
+    public int cancelOnlyISee(int postId);
 
+    //删除动态
+    public int invalidPost(int postId);
 }

@@ -69,7 +69,6 @@
                 <p>
                 <p>
                     <button id="like">点赞</button>
-                    <button id="comment">评论</button>
                     <button id="detail">详情</button>
                     <button id="reprint">转载</button>
                     <button id="onlyIsee">仅自己可见</button>

@@ -20,6 +20,7 @@ public class PostVO {
     private int reprintId;      //转载id,默认0=false
     private int valid;          //是否存在（可能被删除）
     private Date postTime;      //发布时间
+    private List<LikerVO> likerVOs;     //点赞人集合
 
     public PostVO() {
     }
@@ -102,5 +103,13 @@ public class PostVO {
 
     public void setPostTime(Date postTime) {
         this.postTime = postTime;
+    }
+
+    public List<LikerVO> getLikerVOs() {
+        return likerVOs;
+    }
+
+    public void setLikerVOs(List<LikerVO> likerVOs) {
+        this.likerVOs = likerVOs;
     }
 }

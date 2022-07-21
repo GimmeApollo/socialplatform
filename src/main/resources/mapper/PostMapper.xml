@@ -39,21 +39,44 @@
         where `user_id`=#{userId} and `valid`=1;
     </select>
 
-    <!-- 查看自己关注的人的动态 -->
+    <!-- 查看自己关注的人的动态（包括自己） -->
     <select id="selectByFollowerId" resultType="com.hdz.socialplatform.entity.PostVO">
-        select `post_id`,`user_id`, `content`, `path`,`only_i_see`,`if_reprint`,`reprint_id`,`post_time`
+        select `post_id`,`user_id`, `content`, `path`,`only_i_see`,`if_reprint`,`reprint_id`
         from `user_post`
-        where `user_id` in
-        (
-            select `star_id`
-            from `user_follow`
-            where `follower_id`=#{followerId} and `valid`=1 and `star_id` not in (
-                select `user_id`
-                from `user_shield`
-                where `black_id`=#{followerId} and `valid`=1
+        where (
+	        (`user_id` in (
+			select `star_id`
+			from `user_follow`
+			where `follower_id`=#{followerId} and `valid`=1 and `star_id` not in (
+				select `user_id`
+				from `user_shield`
+				where `black_id`=#{followerId} and `valid`=1
+                )
             )
-        ) and `only_i_see`=0;
+            and `only_i_see`=0) or `user_id`=#{followerId}
+        ) and `valid`=1;
+
     </select>
+
+    <!--  设置仅自己可见  -->
+    <update id="setOnlyISee">
+        update `user_post`
+        set `only_i_see`= 1
+        where `post_id`=#{postId};
+    </update>
+
+    <!--  大家可见  -->
+    <update id="cancelOnlyISee">
+        update `user_post`
+        set `only_i_see`= 0
+        where `post_id`=#{postId};
+    </update>
+
+    <update id="invalidPost">
+        update `user_post`
+        set `valid`=0
+        where `post_id`=#{postId};
+    </update>
 
 
 </mapper>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hdz.socialplatform.dao.LikeMapper">
+
+    <select id="fansByPager" resultType="com.hdz.socialplatform.entity.FansVO">
+        SELECT `id`, `name`, `avatar`, `profile`,`valid`
+        from user
+        left join user_follow
+        on user.id = user_follow.star_id and #{starId}=`follower_id`
+        WHERE `id` IN (
+            SELECT `follower_id`
+            FROM user_follow
+            where `star_id`=#{starId} and valid = 1
+        )
+        limit #{offset},#{limit};
+    </select>
+
+    <select id="starByPager" resultType="com.hdz.socialplatform.entity.StarVO">
+        SELECT `id`, `name`, `avatar`, `profile`, uf2.valid
+        from user
+        join user_follow as uf
+        on uf.follower_id = #{followerId} and uf.valid = 1 and uf.star_id = user.id
+        left join user_follow as uf2
+        on user.id = uf2.follower_id and uf2.star_id= #{followerId}
+        ORDER BY uf.follow_id
+        LIMIT #{offset},#{limit};
+    </select>
+
+    <select id="countFans" resultType="java.lang.Integer">
+        select count(*) from user_follow where star_id = #{id} and valid = 1;
+    </select>
+
+    <select id="countFollowers" resultType="java.lang.Integer">
+        select count(*) from user_follow where follower_id = #{id} and valid = 1;
+    </select>
+
+<!--    public Integer ifLike(int likerId, int postId);-->
+
+<!--    public Integer insertLike(int likerId, int postId);-->
+
+<!--    public Integer updateLike(int likerId, int postId);-->
+
+<!--    public Integer unLike(int likerId, int postId);-->
+
+    <select id="likerList" resultType="com.hdz.socialplatform.entity.LikerVO">
+        SELECT `id`, `name`, `avatar`
+        from `user`
+        join  `user_like`
+        on `id`=`like_id`
+        where `post_id`=#{postId} and `valid`=1;
+    </select>
+
+
+    <select id="ifLike" resultType="java.lang.Integer">
+        select `valid`
+        from `user_like`
+        where `liker_id` = #{likerId} and `post_id`=#{postId}
+    </select>
+
+    <insert id="insertLike">
+        insert into user_like(`liker_id`, `post_id` ,`valid`) values(#{likerId}, #{postId},1);
+    </insert>
+
+    <update id="updateLike">
+        update user_like
+        set `valid` = 1
+        where `liker_id` = #{likerId} and `post_id`=#{postId};
+    </update>
+
+    <update id="unLike">
+        update user_like
+        set `valid` = 0
+        where `liker_id` = #{likerId} and `post_id`=#{postId};
+    </update>
+
+
+</mapper>

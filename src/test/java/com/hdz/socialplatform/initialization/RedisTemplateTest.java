@@ -1,6 +1,7 @@
 package com.hdz.socialplatform.initialization;
 
 import com.hdz.socialplatform.SocialPlatformApplicationTests;
+import com.hdz.socialplatform.entity.Event;
 import com.hdz.socialplatform.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.util.Lists;
@@ -9,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 
+import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -29,8 +31,11 @@ public class RedisTemplateTest extends SocialPlatformApplicationTests {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
-    @Autowired
-    private RedisTemplate<String, Object> redisCacheTemplate;   //用Object还是Serializable好？
+    @Resource
+    private RedisTemplate<String, Object> redisTemplate;   //用Object还是Serializable好？
+
+    @Resource
+    private RedisTemplate<String, Event> eventRedisTemplate;   //用Object还是Serializable好？
 
     /**
      * 测试 Redis 操作
@@ -48,16 +53,16 @@ public class RedisTemplateTest extends SocialPlatformApplicationTests {
 
         //3、测试object
         String key = "hdz:user:1";
-        redisCacheTemplate.opsForValue().set(key, new User());
+        redisTemplate.opsForValue().set(key, new User());
         // 对应 String（字符串）
-        User user = (User) redisCacheTemplate.opsForValue().get(key);
+        User user = (User) redisTemplate.opsForValue().get(key);
         log.debug("【user】= {}", user);
 
         //4、测试带泛型的list
         String keyList = "hdz:userList";
         List<User> users= Lists.newArrayList(user);
-        redisCacheTemplate.opsForValue().set(keyList,users,5, TimeUnit.MINUTES);
-        List<User> list2 = (List<User>)redisCacheTemplate.opsForValue().get(keyList);
+        redisTemplate.opsForValue().set(keyList,users,5, TimeUnit.MINUTES);
+        List<User> list2 = (List<User>)redisTemplate.opsForValue().get(keyList);
         list2.forEach(user1 -> System.out.println(user1.toString()));
 
         //5、测试hash
@@ -69,10 +74,11 @@ public class RedisTemplateTest extends SocialPlatformApplicationTests {
                 this.put("hdz:user:3",new User());
             }
         };
-        redisCacheTemplate.boundHashOps(hashKey).putAll(hashMap);
+        redisTemplate.boundHashOps(hashKey).putAll(hashMap);
         String key1="hdz:user:3";
-        User user1 = (User) redisCacheTemplate.boundHashOps(hashKey).get(key1);
+        User user1 = (User) redisTemplate.boundHashOps(hashKey).get(key1);
         log.debug("hashKey{"+hashKey+"}中key1{"+key1+"}对应的User为"+user1.toString());
+        System.out.println(eventRedisTemplate);
     }
 
 }

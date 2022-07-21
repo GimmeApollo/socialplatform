@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.jsontype.impl.LaissezFaireSubTypeValidator;
+import com.hdz.socialplatform.entity.Event;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
@@ -47,4 +48,14 @@ public class LettuceRedisConfigurer {
         return redisTemplate;
     }
 
+    @Bean
+    public RedisTemplate<String, Event> eventRedisTemplate(LettuceConnectionFactory connectionFactory) {
+        RedisTemplate<String, Event> eventRedisTemplate = new RedisTemplate<>();
+        eventRedisTemplate.setKeySerializer(new StringRedisSerializer());
+        eventRedisTemplate.setHashKeySerializer(new StringRedisSerializer());
+        eventRedisTemplate.setValueSerializer(new GenericJackson2JsonRedisSerializer());     //这样会把全类名存储在字符串中,对于List<User>也可以正常转化
+        eventRedisTemplate.setHashValueSerializer(new GenericJackson2JsonRedisSerializer());
+        eventRedisTemplate.setConnectionFactory(connectionFactory);
+        return eventRedisTemplate;
+    }
 }

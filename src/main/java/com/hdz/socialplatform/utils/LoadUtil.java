@@ -23,7 +23,7 @@ import java.util.List;
 
 /**
  * @author hdz
- * @description TODO
+ * @description 动态的图片保存
  * @create 2022年03月23日 19:14
  */
 public class LoadUtil {

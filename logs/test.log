@@ -1,25 +1,58 @@
-2022-12-25 12:12:07.189 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:55) - Starting SocialPlatformApplication using Java 12.0.2 on Hdz with PID 27896 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
-2022-12-25 12:12:07.200 [main] DEBUG com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:56) - Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-12-25 12:12:07.202 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
-2022-12-25 12:12:08.537 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
-2022-12-25 12:12:08.538 [main] INFO  org.apache.catalina.core.StandardService(DirectJDKLog.java:173) - Starting service [Tomcat]
-2022-12-25 12:12:08.538 [main] INFO  org.apache.catalina.core.StandardEngine(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-12-25 12:12:08.604 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
-2022-12-25 12:12:09.585 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
-2022-12-25 12:12:09.615 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:61) - Started SocialPlatformApplication in 3.0 seconds (JVM running for 4.167)
-2022-12-25 12:12:12.271 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-25 12:12:12.530 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [233] milliseconds.
-2022-12-25 12:12:13.900 [http-nio-8081-exec-3] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
-2022-12-25 12:12:13.998 [http-nio-8081-exec-3] DEBUG com.hdz.socialplatform.dao.UserMapper.getUser(BaseJdbcLogger.java:137) - ==>  Preparing: SELECT `id`,`name`,`avatar`,`profile` FROM user where `name`=? and `password`=?;
-2022-12-25 12:12:14.016 [http-nio-8081-exec-3] DEBUG com.hdz.socialplatform.dao.UserMapper.getUser(BaseJdbcLogger.java:137) - ==> Parameters: xiao(String), xiao(String)
-2022-12-25 12:12:14.034 [http-nio-8081-exec-3] DEBUG com.hdz.socialplatform.dao.UserMapper.getUser(BaseJdbcLogger.java:137) - <==      Total: 1
-2022-12-25 12:12:14.037 [http-nio-8081-exec-3] DEBUG com.hdz.socialplatform.dao.FansMapper.countFans(BaseJdbcLogger.java:137) - ==>  Preparing: select count(*) from user_follow where star_id = ? and valid = 1;
-2022-12-25 12:12:14.038 [http-nio-8081-exec-3] DEBUG com.hdz.socialplatform.dao.FansMapper.countFans(BaseJdbcLogger.java:137) - ==> Parameters: 1(Integer)
-2022-12-25 12:12:14.040 [http-nio-8081-exec-3] DEBUG com.hdz.socialplatform.dao.FansMapper.countFans(BaseJdbcLogger.java:137) - <==      Total: 1
-2022-12-25 12:12:14.041 [http-nio-8081-exec-3] DEBUG com.hdz.socialplatform.dao.FansMapper.countFollowers(BaseJdbcLogger.java:137) - ==>  Preparing: select count(*) from user_follow where follower_id = ? and valid = 1;
-2022-12-25 12:12:14.041 [http-nio-8081-exec-3] DEBUG com.hdz.socialplatform.dao.FansMapper.countFollowers(BaseJdbcLogger.java:137) - ==> Parameters: 1(Integer)
-2022-12-25 12:12:14.042 [http-nio-8081-exec-3] DEBUG com.hdz.socialplatform.dao.FansMapper.countFollowers(BaseJdbcLogger.java:137) - <==      Total: 1
-2022-12-25 12:12:14.042 [http-nio-8081-exec-3] INFO  com.hdz.socialplatform.controller.UserController(UserController.java:58) - User{id=1, name='xiao', avatar='xiao.png', profile='降魔大圣', fansNum=3, followsNum=4, events=null}
-2022-12-25 12:12:14.058 [http-nio-8081-exec-4] DEBUG com.hdz.socialplatform.dao.PostMapper.selectByMyId(BaseJdbcLogger.java:137) - ==>  Preparing: select `post_id`,`user_id`, `content`, `path`,`only_i_see`,`if_reprint`,`reprint_id`,`post_time` from `user_post` where `user_id`=? and `valid`=1;
-2022-12-25 12:12:14.059 [http-nio-8081-exec-4] DEBUG com.hdz.socialplatform.dao.PostMapper.selectByMyId(BaseJdbcLogger.java:137) - ==> Parameters: 1(Integer)
-2022-12-25 12:12:14.063 [http-nio-8081-exec-4] DEBUG com.hdz.socialplatform.dao.PostMapper.selectByMyId(BaseJdbcLogger.java:137) - <==      Total: 5
+2022-12-26 21:12:43.405 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:55) - Starting SocialPlatformApplication using Java 12.0.2 on Hdz with PID 23496 (E:\Project\IdeaProjects\socialplatform\target\classes started by Administrator in E:\Project\IdeaProjects\socialplatform)
+2022-12-26 21:12:43.412 [main] DEBUG com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:56) - Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-12-26 21:12:43.414 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(SpringApplication.java:637) - No active profile set, falling back to default profiles: default
+2022-12-26 21:12:44.537 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
+2022-12-26 21:12:44.538 [main] INFO  org.apache.catalina.core.StandardService(DirectJDKLog.java:173) - Starting service [Tomcat]
+2022-12-26 21:12:44.539 [main] INFO  org.apache.catalina.core.StandardEngine(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-12-26 21:12:44.615 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2022-12-26 21:12:45.582 [main] INFO  org.apache.coyote.http11.Http11NioProtocol(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
+2022-12-26 21:12:45.607 [main] INFO  com.hdz.socialplatform.SocialPlatformApplication(StartupInfoLogger.java:61) - Started SocialPlatformApplication in 2.767 seconds (JVM running for 3.726)
+2022-13-26 21:13:01.067 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/platform](DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-13-26 21:13:01.265 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase(DirectJDKLog.java:173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [173] milliseconds.
+2022-13-26 21:13:26.487 [http-nio-8081-exec-4] INFO  com.alibaba.druid.pool.DruidDataSource(DruidDataSource.java:923) - {dataSource-1} inited
+2022-13-26 21:13:26.588 [http-nio-8081-exec-4] DEBUG com.hdz.socialplatform.dao.UserMapper.getUser(BaseJdbcLogger.java:137) - ==>  Preparing: SELECT `id`,`name`,`avatar`,`profile` FROM user where `name`=? and `password`=?;
+2022-13-26 21:13:26.606 [http-nio-8081-exec-4] DEBUG com.hdz.socialplatform.dao.UserMapper.getUser(BaseJdbcLogger.java:137) - ==> Parameters: xiao(String), xiao(String)
+2022-13-26 21:13:26.633 [http-nio-8081-exec-4] DEBUG com.hdz.socialplatform.dao.UserMapper.getUser(BaseJdbcLogger.java:137) - <==      Total: 1
+2022-13-26 21:13:26.636 [http-nio-8081-exec-4] DEBUG com.hdz.socialplatform.dao.FansMapper.countFans(BaseJdbcLogger.java:137) - ==>  Preparing: select count(*) from user_follow where star_id = ? and valid = 1;
+2022-13-26 21:13:26.637 [http-nio-8081-exec-4] DEBUG com.hdz.socialplatform.dao.FansMapper.countFans(BaseJdbcLogger.java:137) - ==> Parameters: 1(Integer)
+2022-13-26 21:13:26.715 [http-nio-8081-exec-4] DEBUG com.hdz.socialplatform.dao.FansMapper.countFans(BaseJdbcLogger.java:137) - <==      Total: 1
+2022-13-26 21:13:26.716 [http-nio-8081-exec-4] DEBUG com.hdz.socialplatform.dao.FansMapper.countFollowers(BaseJdbcLogger.java:137) - ==>  Preparing: select count(*) from user_follow where follower_id = ? and valid = 1;
+2022-13-26 21:13:26.717 [http-nio-8081-exec-4] DEBUG com.hdz.socialplatform.dao.FansMapper.countFollowers(BaseJdbcLogger.java:137) - ==> Parameters: 1(Integer)
+2022-13-26 21:13:26.719 [http-nio-8081-exec-4] DEBUG com.hdz.socialplatform.dao.FansMapper.countFollowers(BaseJdbcLogger.java:137) - <==      Total: 1
+2022-13-26 21:13:26.719 [http-nio-8081-exec-4] INFO  com.hdz.socialplatform.controller.UserController(UserController.java:51) - User{id=1, name='xiao', avatar='xiao.png', profile='降魔大圣', fansNum=3, followsNum=4, events=null}
+2022-13-26 21:13:26.732 [http-nio-8081-exec-5] DEBUG com.hdz.socialplatform.dao.PostMapper.selectByMyId(BaseJdbcLogger.java:137) - ==>  Preparing: select `post_id`,`user_id`, `content`, `path`,`only_i_see`,`if_reprint`,`reprint_id`,`post_time` from `user_post` where `user_id`=? and `valid`=1;
+2022-13-26 21:13:26.732 [http-nio-8081-exec-5] DEBUG com.hdz.socialplatform.dao.PostMapper.selectByMyId(BaseJdbcLogger.java:137) - ==> Parameters: 1(Integer)
+2022-13-26 21:13:26.737 [http-nio-8081-exec-5] DEBUG com.hdz.socialplatform.dao.PostMapper.selectByMyId(BaseJdbcLogger.java:137) - <==      Total: 5
+2022-13-26 21:13:26.739 [http-nio-8081-exec-5] DEBUG com.hdz.socialplatform.dao.LikeMapper.likerList(BaseJdbcLogger.java:137) - ==>  Preparing: SELECT `id`, `name`, `avatar` from `user` join `user_like` on `id`=`like_id` where `post_id`=? and `valid`=1;
+2022-13-26 21:13:26.740 [http-nio-8081-exec-5] DEBUG com.hdz.socialplatform.dao.LikeMapper.likerList(BaseJdbcLogger.java:137) - ==> Parameters: 19(Integer)
+2022-13-26 21:13:26.744 [http-nio-8081-exec-5] DEBUG com.hdz.socialplatform.dao.LikeMapper.likerList(BaseJdbcLogger.java:137) - <==      Total: 2
+2022-13-26 21:13:26.745 [http-nio-8081-exec-5] DEBUG com.hdz.socialplatform.dao.LikeMapper.likerList(BaseJdbcLogger.java:137) - ==>  Preparing: SELECT `id`, `name`, `avatar` from `user` join `user_like` on `id`=`like_id` where `post_id`=? and `valid`=1;
+2022-13-26 21:13:26.745 [http-nio-8081-exec-5] DEBUG com.hdz.socialplatform.dao.LikeMapper.likerList(BaseJdbcLogger.java:137) - ==> Parameters: 20(Integer)
+2022-13-26 21:13:26.747 [http-nio-8081-exec-5] DEBUG com.hdz.socialplatform.dao.LikeMapper.likerList(BaseJdbcLogger.java:137) - <==      Total: 1
+2022-13-26 21:13:26.748 [http-nio-8081-exec-5] DEBUG com.hdz.socialplatform.dao.LikeMapper.likerList(BaseJdbcLogger.java:137) - ==>  Preparing: SELECT `id`, `name`, `avatar` from `user` join `user_like` on `id`=`like_id` where `post_id`=? and `valid`=1;
+2022-13-26 21:13:26.748 [http-nio-8081-exec-5] DEBUG com.hdz.socialplatform.dao.LikeMapper.likerList(BaseJdbcLogger.java:137) - ==> Parameters: 21(Integer)
+2022-13-26 21:13:26.749 [http-nio-8081-exec-5] DEBUG com.hdz.socialplatform.dao.LikeMapper.likerList(BaseJdbcLogger.java:137) - <==      Total: 0
+2022-13-26 21:13:26.750 [http-nio-8081-exec-5] DEBUG com.hdz.socialplatform.dao.LikeMapper.likerList(BaseJdbcLogger.java:137) - ==>  Preparing: SELECT `id`, `name`, `avatar` from `user` join `user_like` on `id`=`like_id` where `post_id`=? and `valid`=1;
+2022-13-26 21:13:26.751 [http-nio-8081-exec-5] DEBUG com.hdz.socialplatform.dao.LikeMapper.likerList(BaseJdbcLogger.java:137) - ==> Parameters: 22(Integer)
+2022-13-26 21:13:26.752 [http-nio-8081-exec-5] DEBUG com.hdz.socialplatform.dao.LikeMapper.likerList(BaseJdbcLogger.java:137) - <==      Total: 0
+2022-13-26 21:13:26.753 [http-nio-8081-exec-5] DEBUG com.hdz.socialplatform.dao.LikeMapper.likerList(BaseJdbcLogger.java:137) - ==>  Preparing: SELECT `id`, `name`, `avatar` from `user` join `user_like` on `id`=`like_id` where `post_id`=? and `valid`=1;
+2022-13-26 21:13:26.754 [http-nio-8081-exec-5] DEBUG com.hdz.socialplatform.dao.LikeMapper.likerList(BaseJdbcLogger.java:137) - ==> Parameters: 23(Integer)
+2022-13-26 21:13:26.755 [http-nio-8081-exec-5] DEBUG com.hdz.socialplatform.dao.LikeMapper.likerList(BaseJdbcLogger.java:137) - <==      Total: 0
+2022-14-26 21:14:32.670 [http-nio-8081-exec-7] DEBUG com.hdz.socialplatform.dao.FansMapper.starByPager(BaseJdbcLogger.java:137) - ==>  Preparing: SELECT `id`, `name`, `avatar`, `profile`, uf2.valid from user join user_follow as uf on uf.follower_id = ? and uf.valid = 1 and uf.star_id = user.id left join user_follow as uf2 on user.id = uf2.follower_id and uf2.star_id= ? ORDER BY uf.follow_id LIMIT ?,?;
+2022-14-26 21:14:32.671 [http-nio-8081-exec-7] DEBUG com.hdz.socialplatform.dao.FansMapper.starByPager(BaseJdbcLogger.java:137) - ==> Parameters: 1(Integer), 1(Integer), 0(Integer), 2(Integer)
+2022-14-26 21:14:32.681 [http-nio-8081-exec-7] DEBUG com.hdz.socialplatform.dao.FansMapper.starByPager(BaseJdbcLogger.java:137) - <==      Total: 2
+2022-14-26 21:14:32.682 [http-nio-8081-exec-7] DEBUG com.hdz.socialplatform.dao.FansMapper.countFollowers(BaseJdbcLogger.java:137) - ==>  Preparing: select count(*) from user_follow where follower_id = ? and valid = 1;
+2022-14-26 21:14:32.682 [http-nio-8081-exec-7] DEBUG com.hdz.socialplatform.dao.FansMapper.countFollowers(BaseJdbcLogger.java:137) - ==> Parameters: 1(Integer)
+2022-14-26 21:14:32.683 [http-nio-8081-exec-7] DEBUG com.hdz.socialplatform.dao.FansMapper.countFollowers(BaseJdbcLogger.java:137) - <==      Total: 1
+2022-14-26 21:14:32.684 [http-nio-8081-exec-7] DEBUG com.hdz.socialplatform.dao.UserMapper.getUserById(BaseJdbcLogger.java:137) - ==>  Preparing: SELECT `id`,`name`,`avatar`,`profile` FROM user where `id`=?;
+2022-14-26 21:14:32.684 [http-nio-8081-exec-7] DEBUG com.hdz.socialplatform.dao.UserMapper.getUserById(BaseJdbcLogger.java:137) - ==> Parameters: 1(Integer)
+2022-14-26 21:14:32.685 [http-nio-8081-exec-7] DEBUG com.hdz.socialplatform.dao.UserMapper.getUserById(BaseJdbcLogger.java:137) - <==      Total: 1
+2022-15-26 21:15:07.269 [http-nio-8081-exec-1] DEBUG com.hdz.socialplatform.dao.FansMapper.fansByPager(BaseJdbcLogger.java:137) - ==>  Preparing: SELECT `id`, `name`, `avatar`, `profile`,`valid` from user left join user_follow on user.id = user_follow.star_id and ?=`follower_id` WHERE `id` IN ( SELECT `follower_id` FROM user_follow where `star_id`=? and valid = 1 ) limit ?,?;
+2022-15-26 21:15:07.270 [http-nio-8081-exec-1] DEBUG com.hdz.socialplatform.dao.FansMapper.fansByPager(BaseJdbcLogger.java:137) - ==> Parameters: 1(Integer), 1(Integer), 0(Integer), 2(Integer)
+2022-15-26 21:15:07.274 [http-nio-8081-exec-1] DEBUG com.hdz.socialplatform.dao.FansMapper.fansByPager(BaseJdbcLogger.java:137) - <==      Total: 2
+2022-15-26 21:15:07.274 [http-nio-8081-exec-1] DEBUG com.hdz.socialplatform.dao.FansMapper.countFans(BaseJdbcLogger.java:137) - ==>  Preparing: select count(*) from user_follow where star_id = ? and valid = 1;
+2022-15-26 21:15:07.275 [http-nio-8081-exec-1] DEBUG com.hdz.socialplatform.dao.FansMapper.countFans(BaseJdbcLogger.java:137) - ==> Parameters: 1(Integer)
+2022-15-26 21:15:07.277 [http-nio-8081-exec-1] DEBUG com.hdz.socialplatform.dao.FansMapper.countFans(BaseJdbcLogger.java:137) - <==      Total: 1
+2022-15-26 21:15:07.278 [http-nio-8081-exec-1] DEBUG com.hdz.socialplatform.dao.UserMapper.getUserById(BaseJdbcLogger.java:137) - ==>  Preparing: SELECT `id`,`name`,`avatar`,`profile` FROM user where `id`=?;
+2022-15-26 21:15:07.278 [http-nio-8081-exec-1] DEBUG com.hdz.socialplatform.dao.UserMapper.getUserById(BaseJdbcLogger.java:137) - ==> Parameters: 1(Integer)
+2022-15-26 21:15:07.280 [http-nio-8081-exec-1] DEBUG com.hdz.socialplatform.dao.UserMapper.getUserById(BaseJdbcLogger.java:137) - <==      Total: 1

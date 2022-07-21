@@ -2,20 +2,16 @@ package com.hdz.socialplatform.entity;
 
 /**
  * @author hdz
- * @description 明星VO（被关注的人）
- * @create 2022年03月19日 14:52
+ * @description 点赞人VO
+ * @create 2022年03月19日 14:24
  */
-public class StarVO {
-
+public class LikerVO {
 
     private int id;
     private String name;
     private String avatar;      //头像
-    private String profile;     //简介
 
-    private Integer valid=0;    //是否被明星关注
-
-    public StarVO() {
+    public LikerVO() {
     }
 
     public int getId() {
@@ -42,19 +38,6 @@ public class StarVO {
         this.avatar = avatar;
     }
 
-    public String getProfile() {
-        return profile;
-    }
 
-    public void setProfile(String profile) {
-        this.profile = profile;
-    }
 
-    public Integer getValid() {
-        return valid;
-    }
-
-    public void setValid(Integer valid) {
-        this.valid = valid;
-    }
 }

@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author hdz
- * @description TODO
+ * @description 关注和屏蔽controller
  * @create 2022年03月18日 20:30
  */
 
@@ -44,7 +44,6 @@ public class FansController {
         return mv;
     }
 
-    //获取关注列表
     //获取粉丝列表
     @GetMapping(value = "/stars")
     public ModelAndView getStars(@RequestParam("id") int id, @RequestParam("page") int page,@RequestParam("size") int size){
